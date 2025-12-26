@@ -1,1 +1,1071 @@
-[00:00:00.412] Server  LOG     ✓ Ready in 242ms
+[00:00:00.419] Server  LOG     ✓ Ready in 237ms
+[00:01:06.886] Server  ERROR   ⨯ ./pages/index.js:6:1
+Module not found: Can't resolve '../styles/Home.module.css'
+  4 | import ResultsView from "../components/ResultsView";
+  5 | import { mockListings } from "../lib/mockData";
+> 6 | import styles from "../styles/Home.module.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function Home() {
+  9 |   const [searchQuery, setSearchQuery] = useState("Fender Jazz Bass");
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:06.887] Server  ERROR   ⨯ ./pages/index.js:6:1
+Module not found: Can't resolve '../styles/Home.module.css'
+  4 | import ResultsView from "../components/ResultsView";
+  5 | import { mockListings } from "../lib/mockData";
+> 6 | import styles from "../styles/Home.module.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function Home() {
+  9 |   const [searchQuery, setSearchQuery] = useState("Fender Jazz Bass");
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:06.888] Server  ERROR   ⨯ ./pages/index.js:6:1
+Module not found: Can't resolve '../styles/Home.module.css'
+  4 | import ResultsView from "../components/ResultsView";
+  5 | import { mockListings } from "../lib/mockData";
+> 6 | import styles from "../styles/Home.module.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function Home() {
+  9 |   const [searchQuery, setSearchQuery] = useState("Fender Jazz Bass");
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:06.888] Server  ERROR   ⨯ ./pages/index.js:6:1
+Module not found: Can't resolve '../styles/Home.module.css'
+  4 | import ResultsView from "../components/ResultsView";
+  5 | import { mockListings } from "../lib/mockData";
+> 6 | import styles from "../styles/Home.module.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function Home() {
+  9 |   const [searchQuery, setSearchQuery] = useState("Fender Jazz Bass");
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:06.889] Server  ERROR   ⨯ ./pages/index.js:6:1
+Module not found: Can't resolve '../styles/Home.module.css'
+  4 | import ResultsView from "../components/ResultsView";
+  5 | import { mockListings } from "../lib/mockData";
+> 6 | import styles from "../styles/Home.module.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function Home() {
+  9 |   const [searchQuery, setSearchQuery] = useState("Fender Jazz Bass");
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:06.889] Server  ERROR   ⨯ ./pages/index.js:6:1
+Module not found: Can't resolve '../styles/Home.module.css'
+  4 | import ResultsView from "../components/ResultsView";
+  5 | import { mockListings } from "../lib/mockData";
+> 6 | import styles from "../styles/Home.module.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function Home() {
+  9 |   const [searchQuery, setSearchQuery] = useState("Fender Jazz Bass");
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:06.890] Server  ERROR   ⨯ ./pages/index.js:6:1
+Module not found: Can't resolve '../styles/Home.module.css'
+  4 | import ResultsView from "../components/ResultsView";
+  5 | import { mockListings } from "../lib/mockData";
+> 6 | import styles from "../styles/Home.module.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function Home() {
+  9 |   const [searchQuery, setSearchQuery] = useState("Fender Jazz Bass");
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:06.890] Server  ERROR   ⨯ ./pages/index.js:6:1
+Module not found: Can't resolve '../styles/Home.module.css'
+  4 | import ResultsView from "../components/ResultsView";
+  5 | import { mockListings } from "../lib/mockData";
+> 6 | import styles from "../styles/Home.module.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function Home() {
+  9 |   const [searchQuery, setSearchQuery] = useState("Fender Jazz Bass");
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:06.916] Server  LOG     ✓ Compiled in 34ms
+[00:01:07.372] Browser ERROR   ./components/Sidebar.module.css
+Transforming CSS failed
+Selector "input[type="radio"]" is not pure. Pure selectors must contain at least one local class or id.
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[00:01:07.372] Browser ERROR   ./pages/index.js:6:1
+Module not found: Can't resolve '../styles/Home.module.css'
+  4 | import ResultsView from "../components/ResultsView";
+  5 | import { mockListings } from "../lib/mockData";
+> 6 | import styles from "../styles/Home.module.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function Home() {
+  9 |   const [searchQuery, setSearchQuery] = useState("Fender Jazz Bass");
+
+https://nextjs.org/docs/messages/module-not-found
+[00:01:22.213] Server  LOG     ✓ Compiled in 11ms
+[00:01:22.364] Browser ERROR   ./components/Sidebar.module.css
+Transforming CSS failed
+Selector "input[type="radio"]" is not pure. Pure selectors must contain at least one local class or id.
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[00:01:22.364] Browser ERROR   ./pages/index.js:6:1
+Module not found: Can't resolve '../styles/Home.module.css'
+  4 | import ResultsView from "../components/ResultsView";
+  5 | import { mockListings } from "../lib/mockData";
+> 6 | import styles from "../styles/Home.module.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function Home() {
+  9 |   const [searchQuery, setSearchQuery] = useState("Fender Jazz Bass");
+
+https://nextjs.org/docs/messages/module-not-found
+[00:01:22.364] Browser ERROR   ./components/Sidebar.module.css
+Transforming CSS failed
+Selector "input[type="radio"]" is not pure. Pure selectors must contain at least one local class or id.
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[00:01:22.514] Server  LOG     ✓ Compiled in 3ms
+[00:01:23.361] Browser ERROR   ./components/Sidebar.module.css
+Transforming CSS failed
+Selector "input[type="radio"]" is not pure. Pure selectors must contain at least one local class or id.
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[00:01:23.361] Browser ERROR   ./components/Sidebar.module.css
+Transforming CSS failed
+Selector "input[type="radio"]" is not pure. Pure selectors must contain at least one local class or id.
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[00:01:32.501] Server  LOG     ✓ Compiled in 39ms
+[00:01:32.607] Server  LOG     ✓ Compiled in 9ms
+[00:01:33.362] Browser ERROR   ./components/Sidebar.module.css
+Transforming CSS failed
+Selector "input[type="radio"]" is not pure. Pure selectors must contain at least one local class or id.
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[00:01:33.362] Browser ERROR   ./node_modules/next/dist/esm/build/templates/pages.js:6:1
+Export default doesn't exist in target module
+The export default was not found in module [project]/pages/_app.js [ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:01:33.362] Browser ERROR   ./components/Sidebar.module.css
+Transforming CSS failed
+Selector "input[type="radio"]" is not pure. Pure selectors must contain at least one local class or id.
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[00:01:50.841] Server  LOG     ✓ Compiled in 2ms
+[00:01:51.510] Browser ERROR   ./components/Sidebar.module.css
+Transforming CSS failed
+Selector "input[type="radio"]" is not pure. Pure selectors must contain at least one local class or id.
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[00:02:57.417] Server  LOG     ✓ Compiled in 44ms
+[00:02:58.363] Browser ERROR   ./components/Sidebar.module.css
+Transforming CSS failed
+Selector "input[type="radio"]" is not pure. Pure selectors must contain at least one local class or id.
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[00:03:01.737] Browser ERROR   uncaughtError: Error: ./components/Sidebar.module.css
+Transforming CSS failed
+Selector "input[type="radio"]" is not pure. Pure selectors must contain at least one local class or id.
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+
+[00:03:01.875] Browser ERROR   ./components/Sidebar.module.css
+Transforming CSS failed
+Selector "input[type="radio"]" is not pure. Pure selectors must contain at least one local class or id.
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[00:03:01.875] Browser ERROR   ./components/Sidebar.module.css
+Transforming CSS failed
+Selector "input[type="radio"]" is not pure. Pure selectors must contain at least one local class or id.
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[00:03:45.978] Server  LOG     ✓ Compiled in 1ms
+[00:03:46.054] Server  LOG     ✓ Compiled in 3ms
+[00:03:46.359] Browser ERROR   ./components/Sidebar.module.css
+Transforming CSS failed
+Selector "input[type="radio"]" is not pure. Pure selectors must contain at least one local class or id.
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[00:03:46.359] Browser ERROR   ./components/Sidebar.module.css
+Transforming CSS failed
+Selector "input[type="radio"]" is not pure. Pure selectors must contain at least one local class or id.
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[00:04:22.865] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:04:27.297] Browser LOG     Toggle source: ss
+[00:04:27.772] Browser LOG     Toggle source: ss
+[00:05:17.238] Server  LOG     ✓ Compiled in 3ms
+[00:05:47.917] Server  LOG     ✓ Compiled in 3ms
+[00:06:15.253] Server  LOG     ✓ Compiled in 2ms
+[00:06:43.296] Server  LOG     ✓ Compiled in 4ms
+[00:06:57.634] Server  LOG     ✓ Compiled in 4ms
+[00:07:17.484] Server  LOG     ✓ Compiled in 6ms
+[00:07:34.800] Server  LOG     ✓ Compiled in 1ms
+[00:09:43.009] Server  LOG     ✓ Compiled in 5ms
+[00:09:49.156] Server  LOG     ✓ Compiled in 3ms
+[00:09:49.371] Browser ERROR   A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://react.dev/link/controlled-components
+[00:10:05.629] Server  LOG     ✓ Compiled in 4ms
+[00:10:41.789] Server  LOG     ✓ Compiled in 12ms
+[00:10:50.335] Server  LOG     ✓ Compiled in 3ms
+[00:11:01.695] Server  LOG     ✓ Compiled in 3ms
+[00:11:31.624] Server  LOG     ✓ Compiled in 5ms
+[00:13:23.618] Server  LOG     ✓ Compiled in 17ms
+[00:13:23.719] Server  LOG     ✓ Compiled in 4ms
+[00:13:37.193] Server  LOG     ✓ Compiled in 73ms
+[00:13:37.362] Browser LOG     Refreshing page data due to server-side change
+[00:13:37.362] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <Home> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:13:52.705] Server  LOG     ✓ Compiled in 10ms
+[00:13:53.369] Browser LOG     Refreshing page data due to server-side change
+[00:13:53.369] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <Home> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:15:48.019] Server  LOG     ✓ Compiled in 9ms
+[00:15:48.362] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <Home> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:15:54.564] Server  LOG     ✓ Compiled in 6ms
+[00:15:55.362] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <Home> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[01:23:18.474] Server  LOG     ✓ Compiled in 25ms
+[01:23:19.285] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <Home> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[01:23:29.496] Server  LOG     ✓ Compiled in 3ms
+[01:23:30.302] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <Home> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[01:23:45.496] Server  LOG     ✓ Compiled in 4ms
+[01:23:46.284] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <Home> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[01:23:54.874] Server  LOG     ✓ Compiled in 4ms
+[01:23:55.283] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <Home> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[01:24:23.001] Server  LOG     ✓ Compiled in 4ms
+[01:24:23.284] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <Home> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[01:25:09.999] Server  LOG     ✓ Compiled in 16ms
+[01:25:10.282] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <Home> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[01:25:35.718] Server  LOG     ✓ Compiled in 7ms
+[01:25:36.286] Browser ERROR   ./components/Sidebar.module.css:102:18
+Parsing CSS source code failed
+  100 |   }
+  101 | }
+> 102 |   margin-bottom: 28px;
+      |                  ^
+  103 |   padding-bottom: 24px;
+  104 |   border-bottom: 1px solid var(--border, #e5e7eb);
+  105 | }
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:25:47.004] Server  LOG     ✓ Compiled in 4ms
+[01:25:47.107] Browser ERROR   ./components/Sidebar.module.css:102:18
+Parsing CSS source code failed
+  100 |   }
+  101 | }
+> 102 |   margin-bottom: 28px;
+      |                  ^
+  103 |   padding-bottom: 24px;
+  104 |   border-bottom: 1px solid var(--border, #e5e7eb);
+  105 | }
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:26:33.345] Server  LOG     ✓ Compiled in 1ms
+[01:26:34.284] Browser ERROR   ./components/Sidebar.module.css:102:18
+Parsing CSS source code failed
+  100 |   }
+  101 | }
+> 102 |   margin-bottom: 28px;
+      |                  ^
+  103 |   padding-bottom: 24px;
+  104 |   border-bottom: 1px solid var(--border, #e5e7eb);
+  105 | }
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:26:40.479] Server  LOG     ✓ Compiled in 2ms
+[01:26:41.289] Browser ERROR   ./components/Sidebar.module.css:102:18
+Parsing CSS source code failed
+  100 |   }
+  101 | }
+> 102 |   margin-bottom: 28px;
+      |                  ^
+  103 |   padding-bottom: 24px;
+  104 |   border-bottom: 1px solid var(--border, #e5e7eb);
+  105 | }
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:26:51.357] Server  LOG     ✓ Compiled in 2ms
+[01:26:52.284] Browser ERROR   ./components/Sidebar.module.css:102:18
+Parsing CSS source code failed
+  100 |   }
+  101 | }
+> 102 |   margin-bottom: 28px;
+      |                  ^
+  103 |   padding-bottom: 24px;
+  104 |   border-bottom: 1px solid var(--border, #e5e7eb);
+  105 | }
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:27:00.949] Server  LOG     ✓ Compiled in 2ms
+[01:27:01.293] Browser ERROR   ./components/Sidebar.module.css:102:18
+Parsing CSS source code failed
+  100 |   }
+  101 | }
+> 102 |   margin-bottom: 28px;
+      |                  ^
+  103 |   padding-bottom: 24px;
+  104 |   border-bottom: 1px solid var(--border, #e5e7eb);
+  105 | }
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:27:12.100] Server  LOG     ✓ Compiled in 4ms
+[01:27:12.285] Browser ERROR   ./components/Sidebar.module.css:102:18
+Parsing CSS source code failed
+  100 |   }
+  101 | }
+> 102 |   margin-bottom: 28px;
+      |                  ^
+  103 |   padding-bottom: 24px;
+  104 |   border-bottom: 1px solid var(--border, #e5e7eb);
+  105 | }
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:27:24.126] Server  LOG     ✓ Compiled in 2ms
+[01:27:24.284] Browser ERROR   ./components/Sidebar.module.css:102:18
+Parsing CSS source code failed
+  100 |   }
+  101 | }
+> 102 |   margin-bottom: 28px;
+      |                  ^
+  103 |   padding-bottom: 24px;
+  104 |   border-bottom: 1px solid var(--border, #e5e7eb);
+  105 | }
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:27:35.838] Server  LOG     ✓ Compiled in 3ms
+[01:27:36.285] Browser ERROR   ./components/Sidebar.module.css:102:18
+Parsing CSS source code failed
+  100 |   }
+  101 | }
+> 102 |   margin-bottom: 28px;
+      |                  ^
+  103 |   padding-bottom: 24px;
+  104 |   border-bottom: 1px solid var(--border, #e5e7eb);
+  105 | }
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:28:18.465] Browser ERROR   ./components/Sidebar.module.css:102:18
+Parsing CSS source code failed
+  100 |   }
+  101 | }
+> 102 |   margin-bottom: 28px;
+      |                  ^
+  103 |   padding-bottom: 24px;
+  104 |   border-bottom: 1px solid var(--border, #e5e7eb);
+  105 | }
+
+Invalid token in pseudo element: WhiteSpace(" ")
+
+Import traces:
+  Browser:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.module.css
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:29:02.148] Server  LOG     ✓ Compiled in 4ms
+[01:29:02.210] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <Home> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[01:30:18.955] Server  LOG     ✓ Compiled in 3ms
+[01:32:48.888] Server  LOG     ✓ Compiled in 24ms
+[01:32:49.284] Browser ERROR   ./components/Sidebar.js:141:18
+Parsing ecmascript source code failed
+  139 |           </div>
+  140 |         ))}
+> 141 |       </fieldset>
+      |                  ^
+> 142 |
+      | ^
+> 143 |       <fieldset className={styles.filterSection}>
+      | ^^^^^^^
+  144 |         <legend className={styles.sectionTitle}>Price Range</legend>
+  145 |         <div className={styles.priceInputs}>
+  146 |           <div className={styles.priceInput}>
+
+Expected '</', got 'jsx text (
+
+      )'
+
+Import traces:
+  Browser:
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:33:03.284] Browser ERROR   ./components/Sidebar.js:141:18
+Parsing ecmascript source code failed
+  139 |           </div>
+  140 |         ))}
+> 141 |       </fieldset>
+      |                  ^
+> 142 |
+      | ^
+> 143 |       <fieldset className={styles.filterSection}>
+      | ^^^^^^^
+  144 |         <legend className={styles.sectionTitle}>Price Range</legend>
+  145 |         <div className={styles.priceInputs}>
+  146 |           <div className={styles.priceInput}>
+
+Expected '</', got 'jsx text (
+
+      )'
+
+Import traces:
+  Browser:
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:33:21.123] Server  LOG     ✓ Compiled in 3ms
+[01:33:21.284] Browser ERROR   ./components/Sidebar.js:141:18
+Parsing ecmascript source code failed
+  139 |           </div>
+  140 |         ))}
+> 141 |       </fieldset>
+      |                  ^
+> 142 |
+      | ^
+> 143 |       <fieldset className={styles.filterSection}>
+      | ^^^^^^^
+  144 |         <legend className={styles.sectionTitle}>Price Range</legend>
+  145 |         <div className={styles.priceInputs}>
+  146 |           <div className={styles.priceInput}>
+
+Expected '</', got 'jsx text (
+
+      )'
+
+Import traces:
+  Browser:
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:33:39.757] Server  LOG     ✓ Compiled in 25ms
+[01:33:40.284] Browser ERROR   ./components/Sidebar.js:141:18
+Parsing ecmascript source code failed
+  139 |           </div>
+  140 |         ))}
+> 141 |       </fieldset>
+      |                  ^
+> 142 |
+      | ^
+> 143 |       <fieldset className={styles.filterSection}>
+      | ^^^^^^^
+  144 |         <legend className={styles.sectionTitle}>Price Range</legend>
+  145 |         <div className={styles.priceInputs}>
+  146 |           <div className={styles.priceInput}>
+
+Expected '</', got 'jsx text (
+
+      )'
+
+Import traces:
+  Browser:
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:33:40.284] Browser ERROR   ./components/ResultsView.js:1:1
+Export default doesn't exist in target module
+> 1 | import ListingCard from "./ListingCard";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import SkeletonCard from "./SkeletonCard";
+  3 | import styles from "./ResultsView.module.css";
+  4 |
+
+The export default was not found in module [project]/components/ListingCard.js [client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Browser:
+    ./components/ResultsView.js
+    ./pages/index.js
+
+  SSR:
+    ./components/ResultsView.js
+    ./pages/index.js
+[01:33:40.284] Browser ERROR   ./components/ResultsView.js:1:1
+Export default doesn't exist in target module
+> 1 | import ListingCard from "./ListingCard";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import SkeletonCard from "./SkeletonCard";
+  3 | import styles from "./ResultsView.module.css";
+  4 |
+
+The export default was not found in module [project]/components/ListingCard.js [ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Browser:
+    ./components/ResultsView.js
+    ./pages/index.js
+
+  SSR:
+    ./components/ResultsView.js
+    ./pages/index.js
+[01:33:51.156] Server  LOG     ✓ Compiled in 9ms
+[01:33:51.284] Browser ERROR   ./components/Sidebar.js:141:18
+Parsing ecmascript source code failed
+  139 |           </div>
+  140 |         ))}
+> 141 |       </fieldset>
+      |                  ^
+> 142 |
+      | ^
+> 143 |       <fieldset className={styles.filterSection}>
+      | ^^^^^^^
+  144 |         <legend className={styles.sectionTitle}>Price Range</legend>
+  145 |         <div className={styles.priceInputs}>
+  146 |           <div className={styles.priceInput}>
+
+Expected '</', got 'jsx text (
+
+      )'
+
+Import traces:
+  Browser:
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:34:02.912] Server  LOG     ✓ Compiled in 12ms
+[01:34:03.285] Browser ERROR   ./components/Sidebar.js:141:18
+Parsing ecmascript source code failed
+  139 |           </div>
+  140 |         ))}
+> 141 |       </fieldset>
+      |                  ^
+> 142 |
+      | ^
+> 143 |       <fieldset className={styles.filterSection}>
+      | ^^^^^^^
+  144 |         <legend className={styles.sectionTitle}>Price Range</legend>
+  145 |         <div className={styles.priceInputs}>
+  146 |           <div className={styles.priceInput}>
+
+Expected '</', got 'jsx text (
+
+      )'
+
+Import traces:
+  Browser:
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:34:20.638] Server  LOG     ✓ Compiled in 6ms
+[01:34:21.285] Browser ERROR   ./components/Sidebar.js:141:18
+Parsing ecmascript source code failed
+  139 |           </div>
+  140 |         ))}
+> 141 |       </fieldset>
+      |                  ^
+> 142 |
+      | ^
+> 143 |       <fieldset className={styles.filterSection}>
+      | ^^^^^^^
+  144 |         <legend className={styles.sectionTitle}>Price Range</legend>
+  145 |         <div className={styles.priceInputs}>
+  146 |           <div className={styles.priceInput}>
+
+Expected '</', got 'jsx text (
+
+      )'
+
+Import traces:
+  Browser:
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:34:38.408] Server  LOG     ✓ Compiled in 12ms
+[01:34:39.289] Browser ERROR   ./components/ListingCard.js:64:7
+Parsing ecmascript source code failed
+  62 |         </div>
+  63 |       </div>
+> 64 |     </div>
+     |       ^^^
+  65 |   );
+  66 | }
+  67 |
+
+Expected corresponding JSX closing tag for <article>
+
+Import traces:
+  Browser:
+    ./components/ListingCard.js
+    ./components/ResultsView.js
+    ./pages/index.js
+
+  SSR:
+    ./components/ListingCard.js
+    ./components/ResultsView.js
+    ./pages/index.js
+[01:34:39.290] Browser ERROR   ./components/Sidebar.js:141:18
+Parsing ecmascript source code failed
+  139 |           </div>
+  140 |         ))}
+> 141 |       </fieldset>
+      |                  ^
+> 142 |
+      | ^
+> 143 |       <fieldset className={styles.filterSection}>
+      | ^^^^^^^
+  144 |         <legend className={styles.sectionTitle}>Price Range</legend>
+  145 |         <div className={styles.priceInputs}>
+  146 |           <div className={styles.priceInput}>
+
+Expected '</', got 'jsx text (
+
+      )'
+
+Import traces:
+  Browser:
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:34:42.816] Server  LOG     ✓ Compiled in 14ms
+[01:34:43.282] Browser ERROR   ./components/Sidebar.js:141:18
+Parsing ecmascript source code failed
+  139 |           </div>
+  140 |         ))}
+> 141 |       </fieldset>
+      |                  ^
+> 142 |
+      | ^
+> 143 |       <fieldset className={styles.filterSection}>
+      | ^^^^^^^
+  144 |         <legend className={styles.sectionTitle}>Price Range</legend>
+  145 |         <div className={styles.priceInputs}>
+  146 |           <div className={styles.priceInput}>
+
+Expected '</', got 'jsx text (
+
+      )'
+
+Import traces:
+  Browser:
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:35:00.006] Server  LOG     ✓ Compiled in 4ms
+[01:35:00.289] Browser ERROR   ./components/Sidebar.js:141:18
+Parsing ecmascript source code failed
+  139 |           </div>
+  140 |         ))}
+> 141 |       </fieldset>
+      |                  ^
+> 142 |
+      | ^
+> 143 |       <fieldset className={styles.filterSection}>
+      | ^^^^^^^
+  144 |         <legend className={styles.sectionTitle}>Price Range</legend>
+  145 |         <div className={styles.priceInputs}>
+  146 |           <div className={styles.priceInput}>
+
+Expected '</', got 'jsx text (
+
+      )'
+
+Import traces:
+  Browser:
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:35:10.723] Server  LOG     ✓ Compiled in 3ms
+[01:35:11.284] Browser ERROR   ./components/Sidebar.js:141:18
+Parsing ecmascript source code failed
+  139 |           </div>
+  140 |         ))}
+> 141 |       </fieldset>
+      |                  ^
+> 142 |
+      | ^
+> 143 |       <fieldset className={styles.filterSection}>
+      | ^^^^^^^
+  144 |         <legend className={styles.sectionTitle}>Price Range</legend>
+  145 |         <div className={styles.priceInputs}>
+  146 |           <div className={styles.priceInput}>
+
+Expected '</', got 'jsx text (
+
+      )'
+
+Import traces:
+  Browser:
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:35:19.085] Server  LOG     ✓ Compiled in 3ms
+[01:35:19.190] Browser ERROR   ./components/Sidebar.js:141:18
+Parsing ecmascript source code failed
+  139 |           </div>
+  140 |         ))}
+> 141 |       </fieldset>
+      |                  ^
+> 142 |
+      | ^
+> 143 |       <fieldset className={styles.filterSection}>
+      | ^^^^^^^
+  144 |         <legend className={styles.sectionTitle}>Price Range</legend>
+  145 |         <div className={styles.priceInputs}>
+  146 |           <div className={styles.priceInput}>
+
+Expected '</', got 'jsx text (
+
+      )'
+
+Import traces:
+  Browser:
+    ./components/Sidebar.js
+    ./pages/index.js
+
+  SSR:
+    ./components/Sidebar.js
+    ./pages/index.js
+[01:36:16.846] Server  LOG     ✓ Compiled in 7ms
+[01:36:16.895] Browser LOG     Refreshing page data due to server-side change

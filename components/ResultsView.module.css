@@ -1,0 +1,226 @@
+.container {
+  flex: 1;
+  padding: 28px;
+  background: var(--bg-gray, #f9fafb);
+  min-height: calc(100vh - 73px);
+}
+
+.loadingState {
+  width: 100%;
+}
+
+.loadingHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.loadingHeader p {
+  font-size: 15px;
+  color: var(--text-secondary, #6b7280);
+  font-weight: 500;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--border, #e5e7eb);
+  border-top-color: var(--primary, #2563eb);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.errorBanner {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid #f59e0b;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);
+  animation: slideDown var(--transition-slow, 0.3s) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.errorHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.errorBanner strong {
+  font-size: 16px;
+  color: #92400e;
+  font-weight: 700;
+}
+
+.errorList {
+  margin: 0 0 12px 0;
+  padding-left: 24px;
+  list-style-type: disc;
+}
+
+.errorList li {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #78350f;
+  line-height: 1.5;
+}
+
+.errorSource {
+  font-weight: 700;
+  color: #92400e;
+}
+
+.errorFooter {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.errorFooter p {
+  margin: 0;
+  font-size: 13px;
+  color: #92400e;
+  font-style: italic;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border, #e5e7eb);
+}
+
+.resultsCount {
+  font-size: 15px;
+  color: var(--text-primary, #111827);
+  font-weight: 600;
+}
+
+.timing {
+  color: var(--text-secondary, #6b7280);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.sortDropdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.sortDropdown label {
+  color: var(--text-secondary, #6b7280);
+  font-weight: 500;
+}
+
+.select {
+  padding: 9px 14px;
+  border: 2px solid var(--border, #e5e7eb);
+  border-radius: 8px;
+  background: var(--bg-white, #ffffff);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: all var(--transition-base, 0.2s) var(--ease-in-out, cubic-bezier(0.4, 0, 0.2, 1));
+}
+
+.select:focus {
+  border-color: var(--primary, #2563eb);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.select:hover {
+  border-color: #d1d5db;
+  background: var(--bg-gray, #f9fafb);
+}
+
+.noResults {
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--text-secondary, #6b7280);
+}
+
+.noResults p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.results > * {
+  animation: cardFadeIn 0.4s var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) backwards;
+}
+
+/* Stagger animation for cards */
+.results > *:nth-child(1) { animation-delay: 0.05s; }
+.results > *:nth-child(2) { animation-delay: 0.1s; }
+.results > *:nth-child(3) { animation-delay: 0.15s; }
+.results > *:nth-child(4) { animation-delay: 0.2s; }
+.results > *:nth-child(5) { animation-delay: 0.25s; }
+.results > *:nth-child(n+6) { animation-delay: 0.3s; }
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 12px;
+  }
+  
+  .sortDropdown {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .select {
+    flex: 1;
+  }
+  
+  .results {
+    gap: 16px;
+  }
+}

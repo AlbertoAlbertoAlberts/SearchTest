@@ -1,0 +1,150 @@
+.card {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: var(--bg-white, #ffffff);
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 12px;
+  transition: all var(--transition-base, 0.2s) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-color: #d1d5db;
+  transform: translateY(-2px);
+}
+
+.card:active {
+  transform: translateY(0);
+  transition-duration: 0.1s;
+}
+
+.imageContainer {
+  flex-shrink: 0;
+}
+
+.imagePlaceholder {
+  width: 140px;
+  height: 140px;
+  background: var(--bg-gray, #f9fafb);
+  border: 2px solid var(--border, #e5e7eb);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.imageIcon {
+  font-size: 40px;
+  opacity: 0.2;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary, #111827);
+  margin: 0;
+  line-height: 1.4;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  letter-spacing: -0.01em;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary, #2563eb);
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: -0.02em;
+}
+
+.metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metadataItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-primary, #111827);
+  line-height: 1.4;
+}
+
+.source {
+  margin-top: auto;
+  padding-top: 4px;
+  font-size: 13px;
+}
+
+.source a {
+  color: var(--text-secondary, #6b7280);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.source a:hover {
+  color: var(--primary, #2563eb);
+  text-decoration: underline;
+  transition: color var(--transition-fast, 0.15s) ease;
+}
+
+@media (max-width: 640px) {
+  .card {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .imagePlaceholder {
+    width: 100%;
+    height: 200px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .title {
+    font-size: 17px;
+  }
+
+  .price {
+    align-self: flex-start;
+    font-size: 20px;
+  }
+  
+  .metadata {
+    gap: 6px;
+  }
+  
+  .metadataItem {
+    font-size: 13px;
+  }
+}

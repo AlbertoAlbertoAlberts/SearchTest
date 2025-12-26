@@ -1,0 +1,52 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-gray);
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.errorContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: var(--bg-gray);
+}
+
+.errorBox {
+  background: var(--bg-white);
+  border: 2px solid #f87171;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.errorBox h2 {
+  color: #dc2626;
+  margin: 0 0 16px 0;
+  font-size: 20px;
+}
+
+.errorBox p {
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    overflow: visible;
+  }
+}

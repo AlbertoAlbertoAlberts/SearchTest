@@ -480,16 +480,23 @@ function Home() {
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [items, setItems] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [metadata, setMetadata] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(null);
     async function runSearch(e) {
         e.preventDefault();
         setLoading(true);
         setError("");
         setItems([]);
+        setMetadata(null);
         try {
             const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`);
             const data = await res.json();
             if (!res.ok) throw new Error(data?.error || "Request failed");
             setItems(data.items || []);
+            setMetadata({
+                tookMs: data.tookMs,
+                errors: data.errors || [],
+                sources: data.sources || []
+            });
         } catch (err) {
             setError(err.message || String(err));
         } finally{
@@ -507,7 +514,7 @@ function Home() {
                 children: "SS.com search test"
             }, void 0, false, {
                 fileName: "[project]/pages/index.js",
-                lineNumber: 29,
+                lineNumber: 37,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -528,7 +535,7 @@ function Home() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/pages/index.js",
-                        lineNumber: 32,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -539,13 +546,13 @@ function Home() {
                         children: loading ? "Searching…" : "Search"
                     }, void 0, false, {
                         fileName: "[project]/pages/index.js",
-                        lineNumber: 38,
+                        lineNumber: 46,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/pages/index.js",
-                lineNumber: 31,
+                lineNumber: 39,
                 columnNumber: 7
             }, this),
             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -559,7 +566,68 @@ function Home() {
                 ]
             }, void 0, true, {
                 fileName: "[project]/pages/index.js",
-                lineNumber: 44,
+                lineNumber: 52,
+                columnNumber: 9
+            }, this),
+            metadata && metadata.errors.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                style: {
+                    marginTop: 16,
+                    padding: 12,
+                    backgroundColor: "#fff3cd",
+                    borderRadius: 8
+                },
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                        children: "Warnings:"
+                    }, void 0, false, {
+                        fileName: "[project]/pages/index.js",
+                        lineNumber: 59,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                        style: {
+                            margin: "8px 0 0 0",
+                            paddingLeft: 20
+                        },
+                        children: metadata.errors.map((err, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                children: [
+                                    err.source,
+                                    ": ",
+                                    err.message
+                                ]
+                            }, idx, true, {
+                                fileName: "[project]/pages/index.js",
+                                lineNumber: 62,
+                                columnNumber: 15
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/pages/index.js",
+                        lineNumber: 60,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/pages/index.js",
+                lineNumber: 58,
+                columnNumber: 9
+            }, this),
+            metadata && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                style: {
+                    marginTop: 16,
+                    fontSize: 14,
+                    opacity: 0.7
+                },
+                children: [
+                    "Found ",
+                    items.length,
+                    " items in ",
+                    metadata.tookMs,
+                    "ms",
+                    metadata.sources.length > 0 && ` from ${metadata.sources.join(", ")}`
+                ]
+            }, void 0, true, {
+                fileName: "[project]/pages/index.js",
+                lineNumber: 71,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -581,27 +649,27 @@ function Home() {
                                 children: it.title || "(no title)"
                             }, void 0, false, {
                                 fileName: "[project]/pages/index.js",
-                                lineNumber: 52,
+                                lineNumber: 80,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
                                     opacity: 0.8
                                 },
-                                children: it.price || ""
+                                children: it.priceText || it.price || ""
                             }, void 0, false, {
                                 fileName: "[project]/pages/index.js",
-                                lineNumber: 53,
+                                lineNumber: 81,
                                 columnNumber: 13
                             }, this),
-                            it.link && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: it.link,
+                            it.url && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: it.url,
                                 target: "_blank",
                                 rel: "noreferrer",
                                 children: "Open listing"
                             }, void 0, false, {
                                 fileName: "[project]/pages/index.js",
-                                lineNumber: 55,
+                                lineNumber: 83,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -612,32 +680,32 @@ function Home() {
                                 },
                                 children: [
                                     "Source: ",
-                                    it.source || "ss.com"
+                                    it.sourceName || it.source || "unknown"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/pages/index.js",
-                                lineNumber: 59,
+                                lineNumber: 87,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, idx, true, {
                         fileName: "[project]/pages/index.js",
-                        lineNumber: 51,
+                        lineNumber: 79,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/pages/index.js",
-                lineNumber: 49,
+                lineNumber: 77,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/pages/index.js",
-        lineNumber: 28,
+        lineNumber: 36,
         columnNumber: 5
     }, this);
 }
-_s(Home, "X/F2ifve3LUHi6t5HzZW/N3LUE4=");
+_s(Home, "DWieP1wpRl0Xe3Z1B6hAyBFM4Jw=");
 _c = Home;
 var _c;
 __turbopack_context__.k.register(_c, "Home");
