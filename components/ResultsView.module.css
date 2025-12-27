@@ -3,6 +3,8 @@
   padding: 28px;
   background: var(--bg-gray, #f9fafb);
   min-height: calc(100vh - 73px);
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 .loadingState {
