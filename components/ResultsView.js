@@ -22,6 +22,7 @@ export default function ResultsView({ items, loading, errors, metadata, onSortCh
   }
 
   const hasNoSources = metadata && metadata.sources && metadata.sources.length === 0;
+  const totalResults = metadata?.totalResults || 0;
 
   return (
     <main className={styles.container} id="main-content" aria-busy="false">
@@ -51,7 +52,7 @@ export default function ResultsView({ items, loading, errors, metadata, onSortCh
         <>
           <div className={styles.header}>
             <div className={styles.resultsCount} role="status" aria-live="polite">
-              Showing {items?.length || 0} listings
+              Showing {items?.length || 0} of {totalResults} listings
               {metadata?.tookMs && (
                 <span className={styles.timing}> · {metadata.tookMs}ms</span>
               )}
@@ -62,13 +63,13 @@ export default function ResultsView({ items, loading, errors, metadata, onSortCh
               <select 
                 id="sort" 
                 className={styles.select}
-                value={currentSort || "relevance"}
+                value={currentSort || "price-low"}
                 onChange={(e) => onSortChange && onSortChange(e.target.value)}
               >
-                <option value="relevance">Relevance</option>
-                <option value="newest">Newest First</option>
-                <option value="price_asc">Price: Low to High</option>
-                <option value="price_desc">Price: High to Low</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="relevance" disabled>Relevance (coming soon)</option>
+                <option value="newest" disabled>Newest First (coming soon)</option>
               </select>
             </div>
           </div>

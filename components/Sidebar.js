@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Sidebar.module.css";
 
 const MARKETPLACE_GROUPS = {
@@ -28,7 +29,57 @@ const MARKETPLACE_GROUPS = {
 
 const CONDITIONS = ["New", "Good as New", "Used", "Bad", "Broken"];
 
-export default function Sidebar({ filters, onFilterChange, sidebarOpen, onToggle }) {
+export default function Sidebar({ filters, onFilterChange, minPrice, maxPrice, onPriceFilterChange, sidebarOpen, onToggle }) {
+  // Local state for price inputs (before applying)
+  const [localMinPrice, setLocalMinPrice] = React.useState(minPrice || "");
+  const [localMaxPrice, setLocalMaxPrice] = React.useState(maxPrice || "");
+  const [priceError, setPriceError] = React.useState("");
+  
+  // Sync local state with props when they change
+  React.useEffect(() => {
+    setLocalMinPrice(minPrice || "");
+    setLocalMaxPrice(maxPrice || "");
+  }, [minPrice, maxPrice]);
+  
+  const handleApplyPriceFilter = () => {
+    const min = localMinPrice.trim();
+    const max = localMaxPrice.trim();
+    
+    // Validation
+    const minNum = min ? parseFloat(min) : null;
+    const maxNum = max ? parseFloat(max) : null;
+    
+    if (minNum !== null && minNum < 0) {
+      setPriceError("Minimum price cannot be negative");
+      return;
+    }
+    
+    if (maxNum !== null && maxNum < 0) {
+      setPriceError("Maximum price cannot be negative");
+      return;
+    }
+    
+    if (minNum !== null && maxNum !== null && minNum > maxNum) {
+      setPriceError("Minimum price must be less than maximum price");
+      return;
+    }
+    
+    setPriceError("");
+    
+    if (onPriceFilterChange) {
+      onPriceFilterChange(min, max);
+    }
+  };
+  
+  const handleClearPriceFilter = () => {
+    setLocalMinPrice("");
+    setLocalMaxPrice("");
+    setPriceError("");
+    if (onPriceFilterChange) {
+      onPriceFilterChange("", "");
+    }
+  };
+  
   const handleSourceToggle = (sourceId) => {
     if (!onFilterChange) return;
     
@@ -145,32 +196,98 @@ export default function Sidebar({ filters, onFilterChange, sidebarOpen, onToggle
         <legend className={styles.sectionTitle}>Price Range</legend>
         <div className={styles.priceInputs}>
           <div className={styles.priceInput}>
-            <label>Min</label>
+            <label>Min €</label>
             <input 
               type="number" 
-              placeholder="€0"
-              value={filters?.priceRange?.min || 0}
-              onChange={(e) => handlePriceChange('min', e.target.value)}
+              placeholder="No min"
+              value={localMinPrice}
+              onChange={(e) => setLocalMinPrice(e.target.value)}
+              min="0"
             />
           </div>
           <div className={styles.priceInput}>
-            <label>Max</label>
+            <label>Max €</label>
             <input 
               type="number" 
-              placeholder="€1000"
-              value={filters?.priceRange?.max || 1000}
-              onChange={(e) => handlePriceChange('max', e.target.value)}
+              placeholder="No max"
+              value={localMaxPrice}
+              onChange={(e) => setLocalMaxPrice(e.target.value)}
+              min="0"
             />
           </div>
         </div>
-        <input
-          type="range"
-          className={styles.rangeSlider}
-          min="0"
-          max="1000"
-          value={filters?.priceRange?.max || 1000}
-          onChange={(e) => handlePriceChange('max', e.target.value)}
-        />
+        
+        {/* Dual range sliders */}
+        <div className={styles.sliderContainer}>
+          <div className={styles.sliderTrack}>
+            <div 
+              className={styles.sliderRange}
+              style={{
+                left: `${(parseInt(localMinPrice) || 0) / 10}%`,
+                right: `${100 - ((parseInt(localMaxPrice) || 1000) / 10)}%`
+              }}
+            />
+          </div>
+          <input
+            type="range"
+            className={styles.rangeSlider}
+            min="0"
+            max="1000"
+            step="10"
+            value={localMinPrice || 0}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (!localMaxPrice || parseInt(value) <= parseInt(localMaxPrice)) {
+                setLocalMinPrice(value);
+              }
+            }}
+          />
+          <input
+            type="range"
+            className={styles.rangeSlider}
+            min="0"
+            max="1000"
+            step="10"
+            value={localMaxPrice || 1000}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (!localMinPrice || parseInt(value) >= parseInt(localMinPrice)) {
+                setLocalMaxPrice(value);
+              }
+            }}
+          />
+        </div>
+        <div className={styles.sliderLabels}>
+          <span>€0</span>
+          <span>€1000+</span>
+        </div>
+        
+        {priceError && (
+          <div className={styles.priceError}>{priceError}</div>
+        )}
+        <div className={styles.priceButtons}>
+          <button 
+            className={styles.applyButton} 
+            onClick={handleApplyPriceFilter}
+            type="button"
+          >
+            Apply
+          </button>
+          {(minPrice || maxPrice) && (
+            <button 
+              className={styles.clearPriceButton} 
+              onClick={handleClearPriceFilter}
+              type="button"
+            >
+              Clear
+            </button>
+          )}
+        </div>
+        {(minPrice || maxPrice) && (
+          <div className={styles.activeFilter}>
+            Active: €{minPrice || '0'} - €{maxPrice || '∞'}
+          </div>
+        )}
       </fieldset>
 
       <fieldset className={styles.filterSection}>

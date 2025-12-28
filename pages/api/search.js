@@ -4,11 +4,13 @@
  */
 
 import * as ssAdapter from "../../lib/adapters/ss.js";
+import * as andeleAdapter from "../../lib/adapters/andele.js";
 import cache from "../../lib/cache.js";
 
 // Map of available adapters
 const ADAPTERS = {
   ss: ssAdapter,
+  andele: andeleAdapter,
 };
 
 // Cache TTL: 5 minutes (in milliseconds)
@@ -29,9 +31,19 @@ export default async function handler(req, res) {
     // Parse sources (default to 'ss' for backward compatibility)
     const sourcesParam = req.query.sources || "ss";
     const sources = sourcesParam.split(",").map((s) => s.trim()).filter(Boolean);
+    
+    // Parse pagination parameters
+    const page = parseInt(req.query.page) || 1;
+    const perPage = parseInt(req.query.perPage) || 20;
+    const maxResults = parseInt(req.query.maxResults) || 300;
+    
+    // Parse price filter parameters
+    const minPrice = req.query.minPrice ? parseFloat(req.query.minPrice) : null;
+    const maxPrice = req.query.maxPrice ? parseFloat(req.query.maxPrice) : null;
+    const sortBy = req.query.sortBy || 'price-low';
 
-    // Generate cache key based on query and sources
-    const cacheKey = `search_${query}_${sources.sort().join(',')}`;
+    // Generate cache key based on query, sources, page, and filters
+    const cacheKey = `search_${query}_${sources.sort().join(',')}_page${page}_${minPrice || 'any'}_${maxPrice || 'any'}_${sortBy}`;
     
     // Check cache first
     const cachedResult = cache.get(cacheKey);
@@ -51,6 +63,7 @@ export default async function handler(req, res) {
     // Collect results and errors from each adapter
     const results = [];
     const errors = [];
+    let metadata = null;
 
     // Execute adapters in parallel
     const adapterPromises = sources.map(async (source) => {
@@ -65,8 +78,28 @@ export default async function handler(req, res) {
       }
 
       try {
-        const listings = await adapter.search(query);
-        results.push(...listings);
+        const result = await adapter.search(query, {
+          maxResults,
+          resultsPerPage: perPage,
+          currentPage: page,
+          fetchDetails: true,
+          minPrice,
+          maxPrice,
+          sortBy,
+        });
+        
+        // Adapter now returns {items, totalResults, currentPage, totalPages, showNotification}
+        results.push(...result.items);
+        
+        // Store metadata from first adapter (for now we only have one)
+        if (!metadata) {
+          metadata = {
+            totalResults: result.totalResults,
+            currentPage: result.currentPage,
+            totalPages: result.totalPages,
+            showNotification: result.showNotification,
+          };
+        }
       } catch (error) {
         errors.push({
           source,
@@ -86,6 +119,10 @@ export default async function handler(req, res) {
       tookMs,
       errors,
       items: results,
+      totalResults: metadata?.totalResults || results.length,
+      currentPage: metadata?.currentPage || page,
+      totalPages: metadata?.totalPages || 1,
+      showNotification: metadata?.showNotification || false,
       cached: false,
     };
     

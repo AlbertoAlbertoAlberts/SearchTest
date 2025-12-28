@@ -14,8 +14,12 @@ export default function Home() {
   const [displayItems, setDisplayItems] = useState([]); // Filtered and sorted
   const [error, setError] = useState("");
   const [metadata, setMetadata] = useState(null);
-  const [sortBy, setSortBy] = useState("relevance");
+  const [sortBy, setSortBy] = useState("price-low"); // Default to price low to high
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  
+  // Price filter state (separate from general filters for direct API passthrough)
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
 
   // Filter state
   const [filters, setFilters] = useState({
@@ -30,14 +34,18 @@ export default function Home() {
     if (router.isReady) {
       const query = router.query.q || "";
       const parsedFilters = parseFiltersFromUrl(router.query);
-      const sort = router.query.sort || "relevance";
+      const sort = router.query.sort || "price-low"; // Default to price-low
+      const min = router.query.minPrice || "";
+      const max = router.query.maxPrice || "";
 
       setSearchQuery(query);
       setFilters(parsedFilters);
       setSortBy(sort);
+      setMinPrice(min);
+      setMaxPrice(max);
 
       if (query) {
-        performSearch(query, parsedFilters);
+        performSearch(query, parsedFilters, sort, min, max);
       }
     }
   }, [router.isReady]);
@@ -47,16 +55,23 @@ export default function Home() {
     if (!router.isReady) return;
 
     const queryString = buildQueryString(searchQuery, filters);
-    const newUrl = queryString ? `/?${queryString}&sort=${sortBy}` : "/";
+    const params = new URLSearchParams(queryString);
+    
+    // Add price filters and sort
+    if (minPrice) params.set('minPrice', minPrice);
+    if (maxPrice) params.set('maxPrice', maxPrice);
+    params.set('sort', sortBy);
+    
+    const newUrl = params.toString() ? `/?${params.toString()}` : "/";
 
     // Only update if different from current
     if (router.asPath !== newUrl) {
       router.replace(newUrl, undefined, { shallow: true });
     }
-  }, [searchQuery, filters, sortBy, router.isReady]);
+  }, [searchQuery, filters, sortBy, minPrice, maxPrice, router.isReady]);
 
   // Perform search with current filters
-  async function performSearch(query, searchFilters = filters) {
+  async function performSearch(query, searchFilters = filters, sort = sortBy, min = minPrice, max = maxPrice) {
     if (!query || !query.trim()) {
       setRawItems([]);
       setDisplayItems([]);
@@ -73,7 +88,17 @@ export default function Home() {
         ? searchFilters.selectedSources.join(',') 
         : 'ss';
       
-      const apiUrl = `/api/search?q=${encodeURIComponent(query)}&sources=${sources}`;
+      // Build API URL with price filters and sort
+      const params = new URLSearchParams({
+        q: query,
+        sources: sources,
+        sortBy: sort,
+      });
+      
+      if (min) params.set('minPrice', min);
+      if (max) params.set('maxPrice', max);
+      
+      const apiUrl = `/api/search?${params.toString()}`;
       
       const res = await fetch(apiUrl);
       const data = await res.json();
@@ -119,13 +144,8 @@ export default function Home() {
   // Memoized handlers for performance
   const handleSearch = useCallback((query) => {
     setSearchQuery(query);
-    
-    // Update URL with new query
-    const queryString = buildQueryString(query, filters, sortBy);
-    router.push(`/?${queryString}`, undefined, { shallow: true });
-    
-    performSearch(query, filters);
-  }, [filters, sortBy]);
+    performSearch(query, filters, sortBy, minPrice, maxPrice);
+  }, [filters, sortBy, minPrice, maxPrice]);
 
   const handleFilterChange = useCallback((newFilters) => {
     setFilters(newFilters);
@@ -137,16 +157,26 @@ export default function Home() {
 
   const handleSortChange = useCallback((newSort) => {
     setSortBy(newSort);
-    
-    // Update URL with current search and filters
-    const queryString = buildQueryString(searchQuery, filters, newSort);
-    router.push(`/?${queryString}`, undefined, { shallow: true });
-  }, [searchQuery, filters]);
+    // Trigger new search with new sort order
+    if (searchQuery) {
+      performSearch(searchQuery, filters, newSort, minPrice, maxPrice);
+    }
+  }, [searchQuery, filters, minPrice, maxPrice]);
+  
+  // Handler for price filter changes
+  const handlePriceFilterChange = useCallback((min, max) => {
+    setMinPrice(min);
+    setMaxPrice(max);
+    // Trigger new search with new price filters
+    if (searchQuery) {
+      performSearch(searchQuery, filters, sortBy, min, max);
+    }
+  }, [searchQuery, filters, sortBy]);
 
   // Re-search when sources change (requires new API call)
   useEffect(() => {
     if (searchQuery) {
-      performSearch(searchQuery, filters);
+      performSearch(searchQuery, filters, sortBy, minPrice, maxPrice);
     }
   }, [filters.selectedSources]);
 
@@ -163,6 +193,9 @@ export default function Home() {
         <Sidebar 
           filters={filters} 
           onFilterChange={handleFilterChange}
+          minPrice={minPrice}
+          maxPrice={maxPrice}
+          onPriceFilterChange={handlePriceFilterChange}
           sidebarOpen={sidebarOpen}
           onToggle={() => setSidebarOpen(false)}
         />
