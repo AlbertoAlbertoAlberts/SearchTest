@@ -13,6 +13,7 @@ function ListingCard({ listing }) {
     hasDescription,
     hasImage,
     imageUrl,
+    descriptionPreview,
   } = listing;
   
   // Debug: Log image data
@@ -68,11 +69,13 @@ function ListingCard({ listing }) {
             </div>
           )}
 
-          <div className={styles.metadataItem}>
-            <CheckmarkIcon checked={hasDescription} />
-            <span>{hasDescription ? "Has Description" : "No Description"}</span>
-          </div>
         </div>
+
+        {descriptionPreview && (
+          <div className={styles.descriptionPreview}>
+            <p>{descriptionPreview}</p>
+          </div>
+        )}
 
         <div className={styles.source}>
           <a href={url} target="_blank" rel="noopener noreferrer">

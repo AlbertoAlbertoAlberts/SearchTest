@@ -96,6 +96,28 @@
   gap: 8px;
 }
 
+.descriptionPreview {
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: var(--bg-gray, #f9fafb);
+  border-left: 3px solid var(--primary, #2563eb);
+  border-radius: 6px;
+}
+
+.descriptionPreview p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary, #6b7280);
+  font-style: italic;
+}
+
+.metadataFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .metadataItem {
   display: flex;
   align-items: center;

@@ -21,7 +21,8 @@ Every site adapter must return an array of:
   conditionText?: string,// optional (only if structured)
   hasDescription?: boolean, // optional
   hasImage?: boolean,       // optional (we don't show images, but can detect)
-  imageUrl?: string         // optional, first image URL
+  imageUrl?: string,        // optional, first image URL
+  descriptionPreview?: string // optional, first sentence of description
 }
 
 ## API response shape
