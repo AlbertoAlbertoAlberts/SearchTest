@@ -15,13 +15,6 @@ function ListingCard({ listing }) {
     imageUrl,
     descriptionPreview,
   } = listing;
-  
-  // Debug: Log image data
-  if (imageUrl) {
-    console.log(`[ListingCard] Rendering with image: ${imageUrl}`);
-  } else {
-    console.log(`[ListingCard] No imageUrl for: ${title?.substring(0, 30)}...`);
-  }
 
   return (
     <article className={styles.card}>
@@ -31,6 +24,8 @@ function ListingCard({ listing }) {
             src={imageUrl} 
             alt={title || "Listing image"}
             className={styles.listingImage}
+            width="140"
+            height="140"
             loading="lazy"
             onError={(e) => {
               e.target.style.display = 'none';
@@ -50,18 +45,16 @@ function ListingCard({ listing }) {
 
       <div className={styles.content}>
         <div className={styles.header}>
-          <h3 className={styles.title}>{title || "(No title)"}</h3>
+          {descriptionPreview && (
+            <div className={styles.descriptionSection}>
+              <span className={styles.descriptionLabel}>Description:</span>
+              <span className={styles.descriptionText}>{descriptionPreview}</span>
+            </div>
+          )}
           {priceText && <div className={styles.price}>{priceText}</div>}
         </div>
 
         <div className={styles.metadata}>
-          {conditionText && (
-            <div className={styles.metadataItem}>
-              <CheckmarkIcon checked={true} />
-              <span>Condition: {conditionText}</span>
-            </div>
-          )}
-
           {postedAtText && (
             <div className={styles.metadataItem}>
               <CheckmarkIcon checked={true} />
@@ -69,13 +62,13 @@ function ListingCard({ listing }) {
             </div>
           )}
 
+          {conditionText && (
+            <div className={styles.metadataItem}>
+              <CheckmarkIcon checked={true} />
+              <span>Condition: {conditionText}</span>
+            </div>
+          )}
         </div>
-
-        {descriptionPreview && (
-          <div className={styles.descriptionPreview}>
-            <p>{descriptionPreview}</p>
-          </div>
-        )}
 
         <div className={styles.source}>
           <a href={url} target="_blank" rel="noopener noreferrer">
