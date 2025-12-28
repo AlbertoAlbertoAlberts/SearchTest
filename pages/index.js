@@ -16,6 +16,7 @@ export default function Home() {
   const [metadata, setMetadata] = useState(null);
   const [sortBy, setSortBy] = useState("price-low"); // Default to price low to high
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
   
   // Price filter state (separate from general filters for direct API passthrough)
   const [minPrice, setMinPrice] = useState("");
@@ -37,15 +38,17 @@ export default function Home() {
       const sort = router.query.sort || "price-low"; // Default to price-low
       const min = router.query.minPrice || "";
       const max = router.query.maxPrice || "";
+      const page = parseInt(router.query.page) || 1;
 
       setSearchQuery(query);
       setFilters(parsedFilters);
       setSortBy(sort);
       setMinPrice(min);
       setMaxPrice(max);
+      setCurrentPage(page);
 
       if (query) {
-        performSearch(query, parsedFilters, sort, min, max);
+        performSearch(query, parsedFilters, sort, min, max, page);
       }
     }
   }, [router.isReady]);
@@ -57,10 +60,11 @@ export default function Home() {
     const queryString = buildQueryString(searchQuery, filters);
     const params = new URLSearchParams(queryString);
     
-    // Add price filters and sort
+    // Add price filters, sort, and page
     if (minPrice) params.set('minPrice', minPrice);
     if (maxPrice) params.set('maxPrice', maxPrice);
     params.set('sort', sortBy);
+    if (currentPage > 1) params.set('page', currentPage);
     
     const newUrl = params.toString() ? `/?${params.toString()}` : "/";
 
@@ -68,10 +72,10 @@ export default function Home() {
     if (router.asPath !== newUrl) {
       router.replace(newUrl, undefined, { shallow: true });
     }
-  }, [searchQuery, filters, sortBy, minPrice, maxPrice, router.isReady]);
+  }, [searchQuery, filters, sortBy, minPrice, maxPrice, currentPage, router.isReady]);
 
   // Perform search with current filters
-  async function performSearch(query, searchFilters = filters, sort = sortBy, min = minPrice, max = maxPrice) {
+  async function performSearch(query, searchFilters = filters, sort = sortBy, min = minPrice, max = maxPrice, page = currentPage) {
     if (!query || !query.trim()) {
       setRawItems([]);
       setDisplayItems([]);
@@ -88,11 +92,12 @@ export default function Home() {
         ? searchFilters.selectedSources.join(',') 
         : 'ss';
       
-      // Build API URL with price filters and sort
+      // Build API URL with price filters, sort, and page
       const params = new URLSearchParams({
         q: query,
         sources: sources,
         sortBy: sort,
+        page: page,
       });
       
       if (min) params.set('minPrice', min);
@@ -119,6 +124,9 @@ export default function Home() {
         tookMs: data.tookMs,
         errors: data.errors || [],
         sources: data.sources || [],
+        totalResults: data.totalResults,
+        currentPage: data.currentPage,
+        totalPages: data.totalPages,
       });
     } catch (err) {
       setError(err.message || String(err));
@@ -144,39 +152,51 @@ export default function Home() {
   // Memoized handlers for performance
   const handleSearch = useCallback((query) => {
     setSearchQuery(query);
-    performSearch(query, filters, sortBy, minPrice, maxPrice);
+    setCurrentPage(1); // Reset to page 1 on new search
+    performSearch(query, filters, sortBy, minPrice, maxPrice, 1);
   }, [filters, sortBy, minPrice, maxPrice]);
 
   const handleFilterChange = useCallback((newFilters) => {
     setFilters(newFilters);
-    
-    // Update URL with current search and filters
-    const queryString = buildQueryString(searchQuery, newFilters, sortBy);
-    router.push(`/?${queryString}`, undefined, { shallow: true });
-  }, [searchQuery, sortBy]);
+    setCurrentPage(1); // Reset to page 1 on filter change
+    if (searchQuery) {
+      performSearch(searchQuery, newFilters, sortBy, minPrice, maxPrice, 1);
+    }
+  }, [searchQuery, sortBy, minPrice, maxPrice]);
 
   const handleSortChange = useCallback((newSort) => {
     setSortBy(newSort);
-    // Trigger new search with new sort order
+    setCurrentPage(1); // Reset to page 1 on sort change
     if (searchQuery) {
-      performSearch(searchQuery, filters, newSort, minPrice, maxPrice);
+      performSearch(searchQuery, filters, newSort, minPrice, maxPrice, 1);
     }
   }, [searchQuery, filters, minPrice, maxPrice]);
+  
+  const handlePageChange = useCallback((newPage) => {
+    setCurrentPage(newPage);
+    if (searchQuery) {
+      performSearch(searchQuery, filters, sortBy, minPrice, maxPrice, newPage);
+    }
+    // Scroll to top on page change
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [searchQuery, filters, sortBy, minPrice, maxPrice]);
   
   // Handler for price filter changes
   const handlePriceFilterChange = useCallback((min, max) => {
     setMinPrice(min);
     setMaxPrice(max);
+    setCurrentPage(1); // Reset to page 1 on price change
     // Trigger new search with new price filters
     if (searchQuery) {
-      performSearch(searchQuery, filters, sortBy, min, max);
+      performSearch(searchQuery, filters, sortBy, min, max, 1);
     }
   }, [searchQuery, filters, sortBy]);
 
   // Re-search when sources change (requires new API call)
   useEffect(() => {
     if (searchQuery) {
-      performSearch(searchQuery, filters, sortBy, minPrice, maxPrice);
+      setCurrentPage(1); // Reset to page 1 on source change
+      performSearch(searchQuery, filters, sortBy, minPrice, maxPrice, 1);
     }
   }, [filters.selectedSources]);
 
@@ -215,6 +235,7 @@ export default function Home() {
             metadata={metadata}
             currentSort={sortBy}
             onSortChange={handleSortChange}
+            onPageChange={handlePageChange}
           />
         )}
       </div>
