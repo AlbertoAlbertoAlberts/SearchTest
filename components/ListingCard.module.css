@@ -35,6 +35,14 @@
   overflow: hidden;
 }
 
+.listingImage {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: var(--bg-gray, #f9fafb);
+}
+
 .imageIcon {
   font-size: 40px;
   opacity: 0.2;

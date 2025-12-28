@@ -12,20 +12,39 @@ function ListingCard({ listing }) {
     postedAtText,
     hasDescription,
     hasImage,
+    imageUrl,
   } = listing;
+  
+  // Debug: Log image data
+  if (imageUrl) {
+    console.log(`[ListingCard] Rendering with image: ${imageUrl}`);
+  } else {
+    console.log(`[ListingCard] No imageUrl for: ${title?.substring(0, 30)}...`);
+  }
 
   return (
     <article className={styles.card}>
       <div className={styles.imageContainer}>
-        {hasImage ? (
-          <div className={styles.imagePlaceholder} role="img" aria-label="Listing image placeholder">
-            <span className={styles.imageIcon} aria-hidden="true">🖼️</span>
-          </div>
-        ) : (
-          <div className={styles.imagePlaceholder} role="img" aria-label="No image available">
-            <span className={styles.imageIcon} aria-hidden="true">📷</span>
-          </div>
-        )}
+        {imageUrl ? (
+          <img 
+            src={imageUrl} 
+            alt={title || "Listing image"}
+            className={styles.listingImage}
+            loading="lazy"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextElementSibling.style.display = 'flex';
+            }}
+          />
+        ) : null}
+        <div 
+          className={styles.imagePlaceholder} 
+          style={{ display: imageUrl ? 'none' : 'flex' }}
+          role="img" 
+          aria-label={imageUrl ? "Listing image placeholder" : "No image available"}
+        >
+          <span className={styles.imageIcon} aria-hidden="true">{imageUrl ? '🖼️' : '📷'}</span>
+        </div>
       </div>
 
       <div className={styles.content}>
