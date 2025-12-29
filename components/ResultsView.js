@@ -24,10 +24,12 @@ export default function ResultsView({ items, loading, errors, metadata, onSortCh
   const hasNoSources = metadata && metadata.sources && metadata.sources.length === 0;
   const totalResults = metadata?.totalResults || 0;
   const currentPage = metadata?.currentPage || 1;
-  const totalPages = metadata?.totalPages || 1;
+  const totalPages = metadata?.totalPages || 0; // Don't default to 1 - use 0 for no results
 
   // Generate page numbers to display
   const getPageNumbers = () => {
+    if (totalPages === 0) return []; // No pages if no results
+    
     const pages = [];
     const maxVisible = 7; // Show max 7 page numbers
     
