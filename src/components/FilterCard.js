@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Header.module.css';
+import styles from './FilterCard.module.css';
 
 // Controlled single-question FilterCard similar to Frontend-example
 export default function FilterCard({ question, isActive = true, answer, onAnswer, onSkip }) {
@@ -7,7 +7,6 @@ export default function FilterCard({ question, isActive = true, answer, onAnswer
 
   return (
     <div className={styles.filterCard} role="region" aria-label="Guided filter">
-      <div className={styles.filterMeta}>{question?.id}</div>
       <div className={styles.filterQuestion}>{question.question}</div>
 
       <div className={styles.filterOptions}>

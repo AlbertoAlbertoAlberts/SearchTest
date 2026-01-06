@@ -16,10 +16,6 @@ export default function Header({ searchQuery, onSearch, sidebarOpen, onToggleSid
 
   return (
     <header className={styles.header}>
-      <a href="#main-content" className={styles.skipLink}>
-        Skip to main content
-      </a>
-      
       <div className={styles.container}>
         <button 
           className={styles.menuButton}
@@ -34,22 +30,12 @@ export default function Header({ searchQuery, onSearch, sidebarOpen, onToggleSid
         </button>
         
         <div className={styles.logo}>
-          <span className={styles.logoText}>Second-Hand Market Finder</span>
+          <span className={styles.logoText}>Second hand item finder</span>
         </div>
 
-        {/* Use shared SearchBar component */}
-        <SearchBar initialQuery={searchQuery} onSearch={onSearch} />
-
-        <nav className={styles.nav}>
-          <a href="#" className={styles.navLink}>Browse</a>
-          <a href="#" className={styles.navLink}>Categories</a>
-          <a href="#" className={styles.navLink}>Saved</a>
-        </nav>
-      </div>
-
-      {/* Active filter chips (below header on desktop) */}
-      <div className={styles.chipsContainer}>
-        {hasSearched && <FilterChips filters={activeFilters} onEdit={onFilterEdit} onRemove={onFilterRemove} />}
+        <div className={styles.searchContainer}>
+          <SearchBar initialQuery={searchQuery} onSearch={onSearch} />
+        </div>
       </div>
 
       {/* Guided FilterCard (one question at a time) */}
@@ -57,6 +43,11 @@ export default function Header({ searchQuery, onSearch, sidebarOpen, onToggleSid
         {guidedOpen && (
           <FilterCard question={activeQuestion} answer={activeAnswer} isActive={true} onAnswer={onGuidedAnswer} onSkip={onGuidedSkip} />
         )}
+      </div>
+
+      {/* Active filter chips (below filter card) */}
+      <div className={styles.chipsContainer}>
+        {hasSearched && <FilterChips filters={activeFilters} onEdit={onFilterEdit} onRemove={onFilterRemove} />}
       </div>
     </header>
   );

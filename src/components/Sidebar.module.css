@@ -2,16 +2,38 @@
   width: 280px;
   background: var(--bg-white, #ffffff);
   border-right: 1px solid var(--border, #e5e7eb);
-  padding: 24px 20px;
+  padding: 0;
   height: calc(100vh - 73px);
   overflow-y: auto;
-  position: sticky;
+  position: fixed;
+  left: 0;
   top: 73px;
   transition: transform 0.3s ease;
+  transform: translateX(-100%);
+  z-index: 90;
+}
+
+.sidebar > div {
+  padding: 24px 20px;
+}
+
+.sidebar.open {
+  transform: translateX(0);
 }
 
 .overlay {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 89;
+}
+
+.overlay.visible {
+  display: block;
 }
 
 .mobileHeader {
