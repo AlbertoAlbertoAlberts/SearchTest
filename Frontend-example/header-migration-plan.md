@@ -70,19 +70,19 @@
 ## Q/A placeholders (to be filled during discovery) ❓
 
 - Q: Which filters must be stored in the URL?  
-  A: [ANSWER_PLACEHOLDER]
+  A: **Store canonical, shareable filters in the URL:** the search query (`q`), `selectedSources`, `minPrice`, `maxPrice`, `sort`, `page`, and high-level `selectedConditions` (e.g., condition types). Guided/temporary answers (interactive suggestions) may be omitted initially and added later if product requires shareable filter state.
 
 - Q: Should guided filter answers be persisted per-session or per-query?  
-  A: [ANSWER_PLACEHOLDER]
+  A: **Primary persistence should be per-query (URL)** so searches are shareable/bookmarkable. **Optionally** persist the last-used filters in sessionStorage/localStorage for UX convenience (restore on revisit), but treat URL as the source of truth.
 
 - Q: Do we want to reuse Tailwind classes or translate to CSS modules?  
-  A: [ANSWER_PLACEHOLDER]
+  A: **Use CSS modules / project styles** to stay consistent with the current codebase. Translate Tailwind-style utilities from the example into `Header.module.css`. If the team later standardizes on Tailwind, we can migrate more broadly.
 
 - Q: What's the mobile behavior for the filter card? slide-over / modal / inline?  
-  A: [ANSWER_PLACEHOLDER]
+  A: **Slide-over (accessible modal) on small screens** to save vertical space; show the FilterCard inline (below search bar) on desktop. Ensure focus trapping and `Esc` to close for accessibility.
 
 - Q: Are there analytics events required (search, filter applied, filter removed)?  
-  A: [ANSWER_PLACEHOLDER]
+  A: **Yes — minimal set:** `search_submitted` (include query + filter summary), `filter_applied`, `filter_removed`, `filter_edited`, and `search_results_shown` (tookMs, source counts). Avoid sending PII and debounce or sample events to reduce noise.
 
 ---
 
@@ -123,6 +123,37 @@
 3. Start implementation tasks (see TODO list).
 
 ---
+
+## Progress & accomplishments ✅
+
+**Completed so far**
+
+- Phase 0 (Discovery & decisions) — completed: Q/A placeholders filled and decisions documented (URL persistence, state ownership, styling, mobile behavior, analytics). ✅
+- Header design/spec — completed: `components/Header.spec.md` added describing API, props, filters shape, events, accessibility, and tests. ✅
+- Phase 1 (SearchBar) — completed: `components/SearchBar.js` implemented and integrated into `components/Header.js`. Search submits trigger `performSearch` via `pages/index.js` handler. ✅
+- Basic Header integration — completed: `components/Header.js` updated to use `SearchBar`, and `pages/index.js` wired to pass `searchQuery`, `onSearch`, and active filter chips. Small CSS updates added to `Header.module.css`. ✅
+- Phase 2 (guided filter wiring) — completed: `handleGuidedAnswer` in `pages/index.js` maps guided answers to page-level filters (brand, condition, priceRange, category) and triggers `performSearch`. ✅
+- **Chip improvements implemented:** brand/category removal handlers added; clicking a chip opens the sidebar and sets the guided `FilterCard` start index to enable editing. ✅
+- Placeholder components added: `FilterCard.js` and `FilterChips.js` (basic UI and styles) — ready to be connected to page state. ✅
+
+**What remains (current snapshot)**
+
+- **Phase 2 — guided flow:** Guided answers are wired in `pages/index.js` (`handleGuidedAnswer` maps answers to `filters` / price and calls `performSearch`) and now mirror the `Frontend-example` UX: questions only appear after a search, the guided card shows one question at a time, answers appear as chips (buttons) in the header, clicking a chip opens the guided card for editing that specific question, and completing the last question no longer cycles back to the first. ✅
+
+- **FilterChips behavior:**
+  - **Remove:** price, conditions, **brand**, and **category** removal handlers are implemented — removing a chip clears the filter and triggers `performSearch`. ✅
+  - **Edit:** clicking a chip now opens the sidebar and sets the guided `FilterCard` to the related question index (via `filterCardStartIndex`), enabling in-context edits; polish (focus/scroll) remains. (1–2h)
+
+- **URL / state synchronization:** Brand and category are now included in URL serialization and parsing (`lib/filterHelpers` updated) so edits/removals should update the canonical URL; add tests to verify this behavior and handle edge-cases. (0.5–1h)
+
+- **Mobile & accessibility (priority):** Implement slide-over/modal for `FilterCard` on small screens, add focus-trap and `Esc` handling, and verify keyboard navigation and ARIA attributes. (2–4h)
+
+- **Tests & QA:** Add unit tests for `FilterCard` question flow and `FilterChips` edit/remove, and integration tests that simulate search + guided answers + chip removal/edit + URL sync. Add accessibility tests (focus trap, keyboard). (2–4h)
+
+- **Docs & demo:** Add `/demo/header` or a Storybook story, update the spec with `data-testid` hooks and usage examples, and document the chip edit/remove behavior. (1–2h)
+
+**Recommended next step:** Implement chip edit/remove behavior (UX completeness) and ensure URL sync; follow up with a focused test pass and the mobile accessibility slide-over implementation.
+
 
 ## Phased implementation plan (recommended)
 

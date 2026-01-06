@@ -90,6 +90,7 @@
 .searchForm {
   flex: 1;
   max-width: 640px;
+  position: relative; /* for absolute-positioned submit button */
 }
 
 .searchInput {
@@ -116,6 +117,22 @@
 
 .searchInput::placeholder {
   color: var(--text-secondary, #6b7280);
+}
+
+.searchButton {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: var(--text-secondary, #6b7280);
+}
+
+.searchButton:hover {
+  color: var(--text-primary, #111827);
 }
 
 .nav {
@@ -166,3 +183,59 @@
     font-size: 14px;
   }
 }
+
+/* Filter chips and card */
+.chipsContainer {
+  border-top: 1px solid var(--border, #e5e7eb);
+  background: var(--bg-white, #ffffff);
+}
+
+.chipsBar {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 8px 24px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.chip {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 10px;
+  background: var(--bg-gray, #f3f4f6);
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chip:hover { background: #e9eefb; }
+
+.chipLabel { margin-right: 6px; }
+
+.chipRemove { font-weight: 700; color: #6b7280; padding-left: 6px; }
+
+.filterCardContainer {
+  max-width: 1440px;
+  margin: 8px auto;
+  padding: 0 24px 12px 24px;
+}
+
+.filterCard {
+  background: var(--bg-gray, #f9fafb);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border, #e5e7eb);
+}
+
+.filterQuestion { font-weight: 600; margin-bottom: 8px; }
+
+.filterOptions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.filterMeta { font-size: 12px; color: var(--text-secondary, #6b7280); margin-bottom: 6px; }
+.filterOption { padding: 8px 10px; background: white; border-radius: 6px; border: 1px solid #e5e7eb; cursor: pointer; }
+
+.filterSkip { padding: 8px 10px; background: transparent; border: none; color: #6b7280; cursor: pointer; }
