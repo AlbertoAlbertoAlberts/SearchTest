@@ -31,21 +31,62 @@ It aggregates search results and redirects users to the original listing on the 
 ### Current folder structure
 
 /
-├─ pages/
-│  ├─ index.js              # UI
-│  └─ api/
-│     └─ search.js          # API orchestrator
+├─ src/                      # Application source code
+│  ├─ pages/
+│  │  ├─ index.js           # UI
+│  │  ├─ _app.js            # Next.js app wrapper
+│  │  └─ api/
+│  │     └─ search.js       # API orchestrator
+│  │
+│  ├─ components/           # React components
+│  │  ├─ Header.js
+│  │  ├─ SearchBar.js
+│  │  ├─ Sidebar.js
+│  │  ├─ FilterCard.js
+│  │  ├─ FilterChips.js
+│  │  ├─ ResultsView.js
+│  │  ├─ ListingCard.js
+│  │  ├─ SkeletonCard.js
+│  │  ├─ shared/            # Shared components
+│  │  │  └─ CheckmarkIcon.js
+│  │  └─ *.module.css       # Component styles
+│  │
+│  ├─ lib/
+│  │  ├─ adapters/          # One adapter per marketplace
+│  │  │  ├─ ss.js           # SS.com adapter
+│  │  │  ├─ osta.js         # Osta adapter
+│  │  │  └─ andele.js       # Andele adapter
+│  │  ├─ cache.js           # Caching (memory or DB-backed later)
+│  │  ├─ http.js            # Shared fetch helpers (headers, timeout)
+│  │  ├─ normalize.js       # Normalize adapter output to Listing schema
+│  │  ├─ filterHelpers.js   # Filter utilities
+│  │  ├─ textHelpers.js     # Text processing utilities
+│  │  └─ browser.js         # Browser automation utilities
+│  │
+│  ├─ styles/               # Global styles
+│  │  ├─ globals.css
+│  │  └─ Home.module.css
+│  │
+│  └─ data/                 # Static data files
+│     ├─ categories_main.json
+│     ├─ ss-lv-categories.json
+│     └─ andele-categories.json
 │
-├─ lib/
-│  ├─ adapters/             # One adapter per marketplace
-│  │  └─ ss.js              # SS.com adapter (first)
-│  ├─ cache.js              # Caching (memory or DB-backed later)
-│  ├─ http.js               # Shared fetch helpers (headers, timeout)
-│  └─ normalize.js          # Normalize adapter output to Listing schema
+├─ research/                # Research & documentation
+│  ├─ FINDINGS/             # Marketplace research
+│  ├─ SAMPLES/              # HTML samples (gitignored)
+│  ├─ PLANS/                # Implementation plans
+│  │  └─ ARCHIVE/           # Completed plans
+│  └─ TOOLS/                # Utilities & scripts
+│
+├─ tests/                   # Test files
+│  ├─ integration/          # Integration tests
+│  └─ debug/                # Debug scripts
 │
 ├─ SPEC.md                  # Data schema, filters, constraints
 ├─ ARCHITECTURE.md          # This file
-└─ package.json
+├─ README.md                # Project overview
+└─ package.json             # Dependencies & scripts
 
 ---
 
