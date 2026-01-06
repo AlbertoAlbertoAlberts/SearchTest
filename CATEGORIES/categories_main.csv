@@ -1,0 +1,218 @@
+category_id,category_level_1,category_level_2,category_level_3,category_type,blacklist_reason,ss_category_id,andele_category_id
+CM00001,Elektrotehnika,Sakaru līdzekļi,Mobilie telefoni,normal,,SS00001,AM00063
+CM00002,Elektrotehnika,Sakaru līdzekļi,Apple,normal,,SS00002,AM00064
+CM00003,Elektrotehnika,Sakaru līdzekļi,Samsung,normal,,SS00003,AM00065
+CM00004,Elektrotehnika,Sakaru līdzekļi,Xiaomi,normal,,SS00004,AM00065
+CM00005,Elektrotehnika,Sakaru līdzekļi,Huawei,normal,,SS00005,AM00065
+CM00006,Elektrotehnika,Sakaru līdzekļi,Nokia,normal,,SS00006,AM00065
+CM00007,Elektrotehnika,Sakaru līdzekļi,Sony,normal,,SS00007,AM00065
+CM00008,Elektrotehnika,Sakaru līdzekļi,LG,normal,,SS00008,AM00065
+CM00009,Elektrotehnika,Sakaru līdzekļi,HTC,normal,,SS00009,AM00065
+CM00010,Elektrotehnika,Sakaru līdzekļi,Microsoft,normal,,SS00010,AM00065
+CM00011,Elektrotehnika,Sakaru līdzekļi,Smart pulksteņi,normal,,SS00011,AM00096
+CM00012,Elektrotehnika,Sakaru līdzekļi,Telefoni ar divām sim kartēm,normal,,SS00012,AM00063
+CM00013,Elektrotehnika,Sakaru līdzekļi,Citi,normal,,SS00013,AM00063
+CM00014,Elektrotehnika,Sakaru līdzekļi,Aksesuāri,normal,,SS00014,AM00005
+CM00015,Elektrotehnika,Sakaru līdzekļi,Akumulatori un baterijas,normal,,SS00015,AM00005
+CM00016,Elektrotehnika,Sakaru līdzekļi,Atmiņas kartes,normal,,SS00016,AM00005
+CM00017,Elektrotehnika,Sakaru līdzekļi,Austiņas,normal,,SS00017,AM00007
+CM00018,Elektrotehnika,Sakaru līdzekļi,Lādēšanas ierīces,normal,,SS00018,AM00068
+CM00019,Elektrotehnika,Sakaru līdzekļi,Maciņi,normal,,SS00019,AM00066
+CM00020,Elektrotehnika,Sakaru līdzekļi,Cits,normal,,SS00020,AM00005
+CM00021,Elektrotehnika,Sakaru līdzekļi,Stacionārie telefoni,normal,,SS00021,AM00069
+CM00022,Elektrotehnika,Sakaru līdzekļi,Radio telefoni,normal,,SS00022,AM00069
+CM00023,Elektrotehnika,Sakaru līdzekļi,Centrāles un komutatori,normal,,SS00023,AM00001
+CM00024,Elektrotehnika,Sakaru līdzekļi,Radiostacijas,normal,,SS00024,AM00001
+CM00025,Elektrotehnika,Sakaru līdzekļi,Satelītu komunikācija,normal,,SS00025,AM00001
+CM00026,Elektrotehnika,Sakaru līdzekļi,Faksi,normal,,SS00026,AM00001
+CM00027,Elektrotehnika,Sakaru līdzekļi,Telefonu numuri,blacklisted,non-item listings,SS00027,
+CM00028,Elektrotehnika,Sakaru līdzekļi,Rezerves daļas un remonts,blacklisted,repairs,SS00028,
+CM00029,Elektrotehnika,Sakaru līdzekļi,Dažādi,normal,,SS00029,AM00005
+CM00030,Elektrotehnika,Datori un orgtehnika,Datori,normal,,SS00030,AM00019
+CM00031,Elektrotehnika,Datori un orgtehnika,Piezīmjdatori,normal,,SS00031,AM00018
+CM00032,Elektrotehnika,Datori un orgtehnika,Planšetdatori,normal,,SS00032,AM00047
+CM00033,Elektrotehnika,Datori un orgtehnika,Spēļu konsoles,normal,,SS00033,AM00090
+CM00034,Elektrotehnika,Datori un orgtehnika,Monitori,normal,,SS00034,AM00020
+CM00035,Elektrotehnika,Datori un orgtehnika,"Printeri, skeneri, tintes",normal,,SS00035,AM00048
+CM00036,Elektrotehnika,Datori un orgtehnika,Komplektējošie datoriem,normal,,SS00036,AM00031
+CM00037,Elektrotehnika,Datori un orgtehnika,Komplektējošie piezīmjdatoriem,normal,,SS00037,AM00031
+CM00038,Elektrotehnika,Datori un orgtehnika,Aksesuāri,normal,,SS00038,AM00031
+CM00039,Elektrotehnika,Datori un orgtehnika,"Kases aparāti, sistēmas, soft",normal,,SS00039,AM00031
+CM00040,Elektrotehnika,Datori un orgtehnika,Multimedia,normal,,SS00040,AM00031
+CM00041,Elektrotehnika,Datori un orgtehnika,Spēles,normal,,SS00041,AM00091
+CM00042,Elektrotehnika,Datori un orgtehnika,Tīkla iekārtas,normal,,SS00042,AM00021
+CM00043,Elektrotehnika,Datori un orgtehnika,Cits,normal,,SS00043,AM00031
+CM00044,Elektrotehnika,Datori un orgtehnika,Datoru remonts,blacklisted,repairs,SS00044,
+CM00045,Elektrotehnika,Datori un orgtehnika,"Programmatūra, iestatīšana, optimizācija",blacklisted,services,SS00045,
+CM00046,Elektrotehnika,Datori un orgtehnika,"Vieda māja, Arduino, Raspberry PI",normal,,SS00046,AM00031
+CM00047,Elektrotehnika,"Audio, Video, DVD, SAT",Audio tehnika,normal,,SS00047,AM00006
+CM00048,Elektrotehnika,"Audio, Video, DVD, SAT",Auto audio,normal,,SS00048,AM00006
+CM00049,Elektrotehnika,"Audio, Video, DVD, SAT",Austiņas,normal,,SS00049,AM00007
+CM00050,Elektrotehnika,"Audio, Video, DVD, SAT",Diktofoni,normal,,SS00050,AM00011
+CM00051,Elektrotehnika,"Audio, Video, DVD, SAT",Jaudas pastiprinātāji,normal,,SS00051,AM00006
+CM00052,Elektrotehnika,"Audio, Video, DVD, SAT",Magnetolas,normal,,SS00052,AM00006
+CM00053,Elektrotehnika,"Audio, Video, DVD, SAT",Mikrofoni,normal,,SS00053,AM00010
+CM00054,Elektrotehnika,"Audio, Video, DVD, SAT",Mūzikas centri,normal,,SS00054,AM00006
+CM00055,Elektrotehnika,"Audio, Video, DVD, SAT","Pults, mikserpultis",normal,,SS00055,AM00006
+CM00056,Elektrotehnika,"Audio, Video, DVD, SAT",Resīveri,normal,,SS00056,AM00014
+CM00057,Elektrotehnika,"Audio, Video, DVD, SAT",Skaļruņi,normal,,SS00057,AM00006
+CM00058,Elektrotehnika,"Audio, Video, DVD, SAT",Skandas,normal,,SS00058,AM00006
+CM00059,Elektrotehnika,"Audio, Video, DVD, SAT","CD, MD atskaņotāji",normal,,SS00059,AM00006
+CM00060,Elektrotehnika,"Audio, Video, DVD, SAT",DJ-atskaņotāji,normal,,SS00060,AM00006
+CM00061,Elektrotehnika,"Audio, Video, DVD, SAT",Mp3 atskaņotāji,normal,,SS00061,AM00008
+CM00062,Elektrotehnika,"Audio, Video, DVD, SAT",Vinila skaņuplates un atskaņotāji,normal,,SS00062,AM00008
+CM00063,Elektrotehnika,"Audio, Video, DVD, SAT",Apgaismes iekārtas,normal,,SS00063,AM00008
+CM00064,Elektrotehnika,"Audio, Video, DVD, SAT",Mūzikas instrumenti,normal,,SS00064,AM00008
+CM00065,Elektrotehnika,"Audio, Video, DVD, SAT",Dažādi,normal,,SS00065,AM00073
+CM00066,Elektrotehnika,"Audio, Video, DVD, SAT","Video, DVD",normal,,SS00066,AM00001
+CM00067,Elektrotehnika,"Audio, Video, DVD, SAT",Mājas kinozāles,normal,,SS00067,AM00006
+CM00068,Elektrotehnika,"Audio, Video, DVD, SAT",Videomagnetofoni,normal,,SS00068,AM00006
+CM00069,Elektrotehnika,"Audio, Video, DVD, SAT",Videokameras,normal,,SS00069,AM00037
+CM00070,Elektrotehnika,"Audio, Video, DVD, SAT",Blu-ray atskaņotāji,normal,,SS00070,AM00001
+CM00071,Elektrotehnika,"Audio, Video, DVD, SAT",DVD atskaņotāji,normal,,SS00071,AM00001
+CM00072,Elektrotehnika,"Audio, Video, DVD, SAT","DVD diski, mpeg, kasetes",normal,,SS00072,AM00001
+CM00073,Elektrotehnika,"Audio, Video, DVD, SAT",Televizori,normal,,SS00073,AM00071
+CM00074,Elektrotehnika,"Audio, Video, DVD, SAT",TV konsoles,normal,,SS00074,AM00001
+CM00075,Elektrotehnika,"Audio, Video, DVD, SAT",Akumulatori videokamerām,normal,,SS00075,AM00001
+CM00076,Elektrotehnika,"Audio, Video, DVD, SAT","Videoaukles, radioaukles",normal,,SS00076,AM00001
+CM00077,Elektrotehnika,"Audio, Video, DVD, SAT",Filmu noma,blacklisted,rentals,SS00077,
+CM00078,Elektrotehnika,"Audio, Video, DVD, SAT",Videonovērošanas sistēmas,normal,,SS00078,AM00001
+CM00079,Elektrotehnika,"Audio, Video, DVD, SAT",Fotogrāfu pakalpojumi,blacklisted,services,SS00079,
+CM00080,Elektrotehnika,"Audio, Video, DVD, SAT",Video operatora pakalpojumi,blacklisted,services,SS00080,
+CM00081,Elektrotehnika,"Audio, Video, DVD, SAT",Dažādi,normal,,SS00081,AM00001
+CM00082,Elektrotehnika,"Audio, Video, DVD, SAT",Satelīta televīzija,normal,,SS00082,AM00001
+CM00083,Elektrotehnika,"Audio, Video, DVD, SAT",Aksesuāri,normal,,SS00083,AM00001
+CM00084,Elektrotehnika,"Audio, Video, DVD, SAT",Ierīkošana,blacklisted,services,SS00084,AM00001
+CM00085,Elektrotehnika,"Audio, Video, DVD, SAT","Satelītantenas, satelītšķīvji",normal,,SS00085,AM00001
+CM00086,Elektrotehnika,"Audio, Video, DVD, SAT",Satelītu TV komplekti,normal,,SS00086,AM00001
+CM00087,Elektrotehnika,"Audio, Video, DVD, SAT","Uztvērēji, dekoderi",normal,,SS00087,AM00001
+CM00088,Elektrotehnika,"Audio, Video, DVD, SAT",Cits,normal,,SS00088,AM00005
+CM00089,Elektrotehnika,"Audio, Video, DVD, SAT","Aksesuāri, elektronikas remonts",blacklisted,repairs,SS00089,
+CM00090,Elektrotehnika,"Audio, Video, DVD, SAT",Radio detaļas,blacklisted,non-item listings,SS00090,
+CM00091,Elektrotehnika,"Audio, Video, DVD, SAT",Datoru remonts,blacklisted,repairs,SS00091,
+CM00092,Elektrotehnika,"Audio, Video, DVD, SAT",Elektronīkas remonts,blacklisted,repairs,SS00092,
+CM00093,Elektrotehnika,"Audio, Video, DVD, SAT",Hidroelektrostacijas,blacklisted,repairs,SS00093,
+CM00094,Elektrotehnika,"Audio, Video, DVD, SAT",Saules elektrostacijas,blacklisted,repairs,SS00094,
+CM00095,Elektrotehnika,"Audio, Video, DVD, SAT",Vēja ģeneratori,blacklisted,repairs,SS00095,
+CM00096,Elektrotehnika,"Audio, Video, DVD, SAT",Dažādi,normal,,SS00096,AM00001
+CM00097,Elektrotehnika,Televizori,Krāsainie (vienkāršie) televizori,normal,,SS00097,AM00071
+CM00098,Elektrotehnika,Televizori,LCD televizori,normal,,SS00098,AM00071
+CM00099,Elektrotehnika,Televizori,LED televizori,normal,,SS00099,AM00071
+CM00100,Elektrotehnika,Televizori,Melnbaltie televizori,normal,,SS00100,AM00071
+CM00101,Elektrotehnika,Televizori,Plazmas televizori,normal,,SS00101,AM00071
+CM00102,Elektrotehnika,Televizori,Projektori,normal,,SS00102,AM00071
+CM00103,Elektrotehnika,Televizori,Projektoru ekrāni,normal,,SS00103,AM00071
+CM00104,Elektrotehnika,Televizori,Satelīta televīzija,normal,,SS00104,AM00071
+CM00105,Elektrotehnika,Televizori,Kabeļi un aksesuāri,normal,,SS00105,AM00071
+CM00106,Elektrotehnika,Televizori,"Kronšteini, stiprinājumi",normal,,SS00106,AM00071
+CM00107,Elektrotehnika,Televizori,Tālvadības pultis,normal,,SS00107,AM00071
+CM00108,Elektrotehnika,Televizori,TV konsoles,normal,,SS00108,AM00071
+CM00109,Elektrotehnika,Televizori,Dažādi,normal,,SS00109,AM00071
+CM00110,Elektrotehnika,Foto un optika,Ciparu fotokameras,normal,,SS00110,AM00033
+CM00111,Elektrotehnika,Foto un optika,Spoguļkameras,normal,,SS00111,AM00032
+CM00112,Elektrotehnika,Foto un optika,Filmu fotokameras,normal,,SS00112,AM00035
+CM00113,Elektrotehnika,Foto un optika,Objektīvi,normal,,SS00113,AM00036
+CM00114,Elektrotehnika,Foto un optika,Akumulatori,normal,,SS00114,AM00032
+CM00115,Elektrotehnika,Foto un optika,"Akumulatori ""pirkstipa"" tipa",normal,,SS00115,AM00032
+CM00116,Elektrotehnika,Foto un optika,Lādētāji,normal,,SS00116,AM00068
+CM00117,Elektrotehnika,Foto un optika,Aksesuāri,normal,,SS00117,AM00032
+CM00118,Elektrotehnika,Foto un optika,Digitālo fotokameru atmiņas,normal,,SS00118,AM00032
+CM00119,Elektrotehnika,Foto un optika,Tālskati un teleskopi,normal,,SS00119,AM00032
+CM00120,Elektrotehnika,Foto un optika,Zibspuldze un apgaismojums,normal,,SS00120,AM00032
+CM00121,Elektrotehnika,Foto un optika,Somas,normal,,SS00121,AM00032
+CM00122,Elektrotehnika,Foto un optika,Fotopapīrs,normal,,SS00122,AM00032
+CM00123,Elektrotehnika,Foto un optika,Statīvi un šasijas,normal,,SS00123,AM00032
+CM00124,Elektrotehnika,Foto un optika,Dažādi,normal,,SS00124,AM00032
+CM00125,Elektrotehnika,Foto un optika,Fotogrāfu pakalpojumi,blacklisted,services,SS00125,AM00032
+CM00126,Elektrotehnika,Foto un optika,Fototehnikas noma,blacklisted,rentals,SS00126,AM00032
+CM00127,Elektrotehnika,Foto un optika,Video operatora pakalpojumi,blacklisted,services,SS00127,AM00032
+CM00128,Elektrotehnika,"Baterijas, Akumulatori",Baterijas,normal,,SS00128,AM00001
+CM00129,Elektrotehnika,"Baterijas, Akumulatori","Akumulatori ""pirkstipa"" tipa",normal,,SS00129,AM00001
+CM00130,Elektrotehnika,"Baterijas, Akumulatori",Akumulatori automobiļiem,normal,,SS00130,AM00001
+CM00131,Elektrotehnika,"Baterijas, Akumulatori",Akumulatori darbarikiem,normal,,SS00131,AM00001
+CM00132,Elektrotehnika,"Baterijas, Akumulatori",Akumulatori elektromobiļiem,normal,,SS00132,AM00001
+CM00133,Elektrotehnika,"Baterijas, Akumulatori",Akumulatori foto un video tehnikai,normal,,SS00133,AM00001
+CM00134,Elektrotehnika,"Baterijas, Akumulatori",Akumulatori piezīmjdatoriem,normal,,SS00134,AM00018
+CM00135,Elektrotehnika,"Baterijas, Akumulatori",Akumulatori telefoniem,normal,,SS00135,AM00033
+CM00136,Elektrotehnika,"Baterijas, Akumulatori",Akumulatori velosipēdiem,normal,,SS00136,AM00034
+CM00137,Elektrotehnika,"Baterijas, Akumulatori",Akumulatori citi,normal,,SS00137,AM00035
+CM00138,Elektrotehnika,"Baterijas, Akumulatori",Lādētāji automobiļiem,normal,,SS00138,AM00036
+CM00139,Elektrotehnika,"Baterijas, Akumulatori",Lādētāji darbarikiem,normal,,SS00139,AM00033
+CM00140,Elektrotehnika,"Baterijas, Akumulatori",Lādētāji foto un video tehnikai,normal,,SS00140,AM00033
+CM00141,Elektrotehnika,"Baterijas, Akumulatori",Lādētāji piezīmjdatoriem un plaukstdatoriem,normal,,SS00141,AM00018
+CM00142,Elektrotehnika,"Baterijas, Akumulatori",Lādētāji telefoniem,normal,,SS00142,AM00033
+CM00143,Elektrotehnika,"Baterijas, Akumulatori",Lādētāji citi,normal,,SS00143,AM00033
+CM00144,Elektrotehnika,"Baterijas, Akumulatori","Sprieguma pārveidotāji, invertori",normal,,SS00144,AM00033
+CM00145,Elektrotehnika,"Baterijas, Akumulatori",Cits,normal,,SS00145,AM00005
+CM00146,Elektrotehnika,Virtuves tehnika,Cepešķrāsnis,normal,,SS00146,AM00073
+CM00147,Elektrotehnika,Virtuves tehnika,Elektriskās plītis,normal,,SS00147,AM00073
+CM00148,Elektrotehnika,Virtuves tehnika,Gāzes plītis,normal,,SS00148,AM00073
+CM00149,Elektrotehnika,Virtuves tehnika,Ledusskapji,normal,,SS00149,AM00073
+CM00150,Elektrotehnika,Virtuves tehnika,Plīts virsmas,normal,,SS00150,AM00073
+CM00151,Elektrotehnika,Virtuves tehnika,Saldētavas,normal,,SS00151,AM00075
+CM00152,Elektrotehnika,Virtuves tehnika,Trauku mazgājamās mašīnas,normal,,SS00152,AM00106
+CM00153,Elektrotehnika,Virtuves tehnika,Tvaika nosūcēji,normal,,SS00153,AM00107
+CM00154,Elektrotehnika,Virtuves tehnika,Vīna skapji,normal,,SS00154,AM00076
+CM00155,Elektrotehnika,Virtuves tehnika,Blenderi,normal,,SS00155,AM00099
+CM00156,Elektrotehnika,Virtuves tehnika,Daudzfunkcionālie katli,normal,,SS00156,AM00073
+CM00157,Elektrotehnika,Virtuves tehnika,Frī vārāmie katli,normal,,SS00157,AM00006
+CM00158,Elektrotehnika,Virtuves tehnika,Gaļas mašīnas,normal,,SS00158,AM00006
+CM00159,Elektrotehnika,Virtuves tehnika,Grilli,normal,,SS00159,AM00006
+CM00160,Elektrotehnika,Virtuves tehnika,Kafijas automāti,normal,,SS00160,AM00100
+CM00161,Elektrotehnika,Virtuves tehnika,Kafijas mājiņas dzirnaviņas,normal,,SS00161,AM00006
+CM00162,Elektrotehnika,Virtuves tehnika,Ledus ģeneratori,normal,,SS00162,AM00006
+CM00163,Elektrotehnika,Virtuves tehnika,Maizes cepšanas iekārtas,normal,,SS00163,AM00090
+CM00164,Elektrotehnika,Virtuves tehnika,Mikroviļņu krāsnis,normal,,SS00164,AM00098
+CM00165,Elektrotehnika,Virtuves tehnika,Mikseri,normal,,SS00165,AM00099
+CM00166,Elektrotehnika,Virtuves tehnika,Produktu griešanas iekārtas,normal,,SS00166,AM00097
+CM00167,Elektrotehnika,Virtuves tehnika,Suļu spiedes,normal,,SS00167,AM00104
+CM00168,Elektrotehnika,Virtuves tehnika,Tējkannas,normal,,SS00168,AM00105
+CM00169,Elektrotehnika,Virtuves tehnika,Tosteri,normal,,SS00169,AM00097
+CM00170,Elektrotehnika,Virtuves tehnika,Trauku un galda piederumi,normal,,SS00170,AM00097
+CM00171,Elektrotehnika,Virtuves tehnika,Tvaika katli,normal,,SS00171,AM00097
+CM00172,Elektrotehnika,Virtuves tehnika,Virtuves kombaini,normal,,SS00172,AM00108
+CM00173,Elektrotehnika,Virtuves tehnika,Virtuves svari,normal,,SS00173,AM00087
+CM00174,Elektrotehnika,Virtuves tehnika,Cits,normal,,SS00174,AM00005
+CM00175,Elektrotehnika,Tīrība un šūšana,Elektriskās slotas,normal,,SS00175,AM00077
+CM00176,Elektrotehnika,Tīrība un šūšana,Gludekļi,normal,,SS00176,AM00003
+CM00177,Elektrotehnika,Tīrība un šūšana,Veļas mašīnas,normal,,SS00177,AM00080
+CM00178,Elektrotehnika,Tīrība un šūšana,Veļas žāvētāji,normal,,SS00178,AM00081
+CM00179,Elektrotehnika,Tīrība un šūšana,Putekļusūcēji,normal,,SS00179,AM00077
+CM00180,Elektrotehnika,Tīrība un šūšana,Šujmašīnas,normal,,SS00180,AM00004
+CM00181,Elektrotehnika,Tīrība un šūšana,Overloki,normal,,SS00181,AM00077
+CM00182,Elektrotehnika,Tīrība un šūšana,"Fēni, matu ieveidotāji, matu taisnotāji",normal,,SS00182,AM00058
+CM00183,Elektrotehnika,Tīrība un šūšana,Elektriskuvekļi,normal,,SS00183,AM00077
+CM00184,Elektrotehnika,Tīrība un šūšana,Epilatori,normal,,SS00184,AM00052
+CM00185,Elektrotehnika,Tīrība un šūšana,Cits,normal,,SS00185,AM00099
+CM00186,Elektrotehnika,Skaistums un veselība,Pulksteņi,normal,,SS00186,AM00099
+CM00187,Elektrotehnika,Skaistums un veselība,Cits,normal,,SS00187,AM00005
+CM00188,Elektrotehnika,Gaisa un ūdens kopšana,Boileri,normal,,SS00188,AM00009
+CM00189,Elektrotehnika,Gaisa un ūdens kopšana,Elektriskie radiatori,normal,,SS00189,AM00009
+CM00190,Elektrotehnika,Gaisa un ūdens kopšana,Elektriskie sildītāji,normal,,SS00190,AM00045
+CM00191,Elektrotehnika,Gaisa un ūdens kopšana,Eļļas radiatori,normal,,SS00191,AM00101
+CM00192,Elektrotehnika,Gaisa un ūdens kopšana,Filtri un ūdens attīrītāji,normal,,SS00192,AM00101
+CM00193,Elektrotehnika,Gaisa un ūdens kopšana,Gaisa aromātiztāji,normal,,SS00193,AM00108
+CM00194,Elektrotehnika,Gaisa un ūdens kopšana,Gaisa filtri,normal,,SS00194,AM00101
+CM00195,Elektrotehnika,Gaisa un ūdens kopšana,Gaisa jonizētāji,normal,,SS00195,AM00101
+CM00196,Elektrotehnika,Gaisa un ūdens kopšana,Gaisa mitrinātāji,normal,,SS00196,AM00105
+CM00197,Elektrotehnika,Gaisa un ūdens kopšana,Infrasarkanie silditāji,normal,,SS00197,AM00045
+CM00198,Elektrotehnika,Gaisa un ūdens kopšana,Kondicionieri,normal,,SS00198,AM00043
+CM00199,Elektrotehnika,Gaisa un ūdens kopšana,Mitruma nosūcēji,normal,,SS00199,AM00102
+CM00200,Elektrotehnika,Gaisa un ūdens kopšana,Ūdens miksētāji,normal,,SS00200,AM00102
+CM00201,Elektrotehnika,Gaisa un ūdens kopšana,Ventilatori,normal,,SS00201,AM00102
+CM00202,Elektrotehnika,Gaisa un ūdens kopšana,Cits,normal,,SS00202,AM00005
+CM00203,Elektrotehnika,Sadzīves tehnika,GPS navigācija,normal,,SS00203,AM00103
+CM00204,Elektrotehnika,Dažādi un remonts,Spuldzes,normal,,SS00204,AM00100
+CM00205,Elektrotehnika,Dažādi un remonts,"Barošanas bloki, draiveri, kontrolieri",normal,,SS00205,AM00100
+CM00206,Elektrotehnika,Dažādi un remonts,LED profili un lentas,normal,,SS00206,AM00100
+CM00207,Elektrotehnika,Dažādi un remonts,"Vieda māja, Arduino, Raspberry PI",normal,,SS00207,AM00108
+CM00208,Elektrotehnika,Dažādi un remonts,Kabeļi un aksesuāri,normal,,SS00208,AM00104
+CM00209,Elektrotehnika,Dažādi un remonts,Tālvadības pultis,normal,,SS00209,AM00103
+CM00210,Elektrotehnika,Dažādi un remonts,"Radiācijas mērītāji, dozimetri",normal,,SS00210,AM00104
+CM00211,Elektrotehnika,Dažādi un remonts,"Radio detaļas, mikroshēmas",normal,,SS00211,AM00106
+CM00212,Elektrotehnika,Dažādi un remonts,Datoru remonts,blacklisted,repairs,SS00212,AM00107
+CM00213,Elektrotehnika,Dažādi un remonts,Elektronīkas remonts,blacklisted,repairs,SS00213,AM00108
+CM00214,Elektrotehnika,Dažādi un remonts,Hidroelektrostacijas,normal,,SS00214,AM00080
+CM00215,Elektrotehnika,Dažādi un remonts,Saules elektrostacijas,normal,,SS00215,AM00079
+CM00216,Elektrotehnika,Dažādi un remonts,Vēja ģeneratori,normal,,SS00216,AM00081
+CM00217,Elektrotehnika,Dažādi un remonts,Dažādi,normal,,SS00217,AM00082
